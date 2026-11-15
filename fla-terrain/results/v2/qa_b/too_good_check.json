@@ -1,0 +1,9 @@
+{
+ "exact_zero_fraction": {
+  "airborne": 0.0506,
+  "partial": 0.0339,
+  "full": 0.03
+ },
+ "partial_frames_corr_loaded_fraction_vs_label_support_fraction": 0.17065567680412227,
+ "n": 62004
+}

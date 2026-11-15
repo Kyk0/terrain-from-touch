@@ -1,0 +1,140 @@
+{
+ "clip": "terrain_hard_slip_g113",
+ "title": "hard-slip, G113 velocity policy",
+ "episode": "walk_hard_slip_walk_g113_test_0003",
+ "t0": 1.0,
+ "t1": 11.0,
+ "group": "terrain",
+ "pool": {
+  "prefix": "walk_hard_slip_walk_g113",
+  "n_test_episodes": 36,
+  "n_fell": 16
+ },
+ "identical_to_dataset": true,
+ "differing_arrays": [],
+ "fps": 30,
+ "physics_dt": 0.002,
+ "base_rig": false,
+ "terrain_cfg": {
+  "class": "hard_slip",
+  "regions": [
+   {
+    "label": 1,
+    "mu": 0.2859374079917576,
+    "stiffness": 770000000.0,
+    "slope": 0.0,
+    "class": "hard_slip"
+   }
+  ],
+  "geoms": [
+   {
+    "type": "plane",
+    "region": 0,
+    "mu": 0.2859374079917576
+   }
+  ],
+  "spawn": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "yaw": 2.886814734922414,
+  "wz_max": 0.1,
+  "params": {
+   "class": "hard_slip",
+   "range_split": "test",
+   "mu_band": "test_in"
+  }
+ },
+ "regions": [
+  {
+   "class": "hard_slip",
+   "label": 1,
+   "mu": 0.2859374079917576,
+   "slope": 0.0,
+   "stiffness": 770000000.0
+  }
+ ],
+ "class": "hard_slip",
+ "variant": null,
+ "band": "test_in",
+ "gait": "g113",
+ "gait_name": "G113 velocity policy",
+ "motion_source": "G113_m2200",
+ "terrain_labels": {
+  "-1": "unknown",
+  "0": "hard_grip",
+  "1": "hard_slip",
+  "2": "soft",
+  "3": "rough",
+  "4": "slope",
+  "5": "edge"
+ },
+ "mass": 19.665999999999997,
+ "zone_layout": {
+  "Z": 8,
+  "frame": "sole: origin at sole bottom centre, x toe, y left, z up; force on sole from ground",
+  "index": "z = i_along * n_across + i_across; i_along=0 heel, i_across=0 at -y",
+  "n_across": 2,
+  "n_along": 4,
+  "name": "grid_2x4",
+  "sole_length_m": 0.18,
+  "sole_width_m": 0.07,
+  "zone_centers_xy_m": [
+   [
+    -0.0675,
+    -0.0175
+   ],
+   [
+    -0.0675,
+    0.0175
+   ],
+   [
+    -0.022499999999999992,
+    -0.0175
+   ],
+   [
+    -0.022499999999999992,
+    0.0175
+   ],
+   [
+    0.022499999999999992,
+    -0.0175
+   ],
+   [
+    0.022499999999999992,
+    0.0175
+   ],
+   [
+    0.0675,
+    -0.0175
+   ],
+   [
+    0.0675,
+    0.0175
+   ]
+  ]
+ },
+ "prediction_file": "pred_P+N_s0.npz",
+ "segment_accuracy": {
+  "n_windows": 50,
+  "terrain_known": 50,
+  "terrain_correct": 50,
+  "support_L_correct": 50,
+  "support_R_correct": 50
+ },
+ "cmd_schedule": {
+  "kind": "turn",
+  "stand_s": 1.0,
+  "vx": 0.37417965338793746,
+  "wz": [
+   0.0,
+   0.3213815089466182,
+   0.0,
+   0.27988260431420064,
+   0.0,
+   0.3050893459817056,
+   0.0
+  ]
+ }
+}

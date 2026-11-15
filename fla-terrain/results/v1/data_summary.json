@@ -1,0 +1,545 @@
+{
+ "episodes": 4572,
+ "bad": 0,
+ "falls": 235,
+ "fall_labels_ok": true,
+ "split_keys": {
+  "test": 1020,
+  "train": 3100,
+  "val": 452
+ },
+ "cells": [
+  {
+   "class": "edge-planks",
+   "mode": "lifted",
+   "source": "liftmid_g113",
+   "episodes": 10,
+   "falls": 1,
+   "hours": 0.055355555555555554
+  },
+  {
+   "class": "edge-planks",
+   "mode": "lifted",
+   "source": "liftmid_g80",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "edge-planks",
+   "mode": "lifted",
+   "source": "liftmid_sonic",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "edge-planks",
+   "mode": "rig",
+   "source": "rig",
+   "episodes": 54,
+   "falls": 0,
+   "hours": 0.3
+  },
+  {
+   "class": "edge-planks",
+   "mode": "stand",
+   "source": "stand",
+   "episodes": 27,
+   "falls": 0,
+   "hours": 0.15
+  },
+  {
+   "class": "edge-planks",
+   "mode": "walk",
+   "source": "walk_g113",
+   "episodes": 90,
+   "falls": 1,
+   "hours": 0.5
+  },
+  {
+   "class": "edge-planks",
+   "mode": "walk",
+   "source": "walk_g80",
+   "episodes": 90,
+   "falls": 1,
+   "hours": 0.49807777777777773
+  },
+  {
+   "class": "edge-planks",
+   "mode": "walk",
+   "source": "walk_sonic",
+   "episodes": 90,
+   "falls": 10,
+   "hours": 0.4879555555555556
+  },
+  {
+   "class": "edge-steps",
+   "mode": "stand",
+   "source": "stand",
+   "episodes": 27,
+   "falls": 8,
+   "hours": 0.10877222222222221
+  },
+  {
+   "class": "edge-steps",
+   "mode": "walk",
+   "source": "walk_g113",
+   "episodes": 90,
+   "falls": 3,
+   "hours": 0.49772777777777777
+  },
+  {
+   "class": "edge-steps",
+   "mode": "walk",
+   "source": "walk_g80",
+   "episodes": 90,
+   "falls": 6,
+   "hours": 0.48483888888888893
+  },
+  {
+   "class": "edge-steps",
+   "mode": "walk",
+   "source": "walk_sonic",
+   "episodes": 90,
+   "falls": 55,
+   "hours": 0.33359444444444447
+  },
+  {
+   "class": "hard_grip",
+   "mode": "lifted",
+   "source": "lifted_g113",
+   "episodes": 18,
+   "falls": 0,
+   "hours": 0.1
+  },
+  {
+   "class": "hard_grip",
+   "mode": "lifted",
+   "source": "lifted_g80",
+   "episodes": 18,
+   "falls": 0,
+   "hours": 0.1
+  },
+  {
+   "class": "hard_grip",
+   "mode": "lifted",
+   "source": "lifted_sonic",
+   "episodes": 18,
+   "falls": 0,
+   "hours": 0.1
+  },
+  {
+   "class": "hard_grip",
+   "mode": "lifted",
+   "source": "liftmid_g113",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "hard_grip",
+   "mode": "lifted",
+   "source": "liftmid_g80",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "hard_grip",
+   "mode": "lifted",
+   "source": "liftmid_sonic",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "hard_grip",
+   "mode": "rig",
+   "source": "rig",
+   "episodes": 54,
+   "falls": 0,
+   "hours": 0.3
+  },
+  {
+   "class": "hard_grip",
+   "mode": "stand",
+   "source": "stand",
+   "episodes": 54,
+   "falls": 0,
+   "hours": 0.3
+  },
+  {
+   "class": "hard_grip",
+   "mode": "walk",
+   "source": "walk_g113",
+   "episodes": 180,
+   "falls": 0,
+   "hours": 1.0
+  },
+  {
+   "class": "hard_grip",
+   "mode": "walk",
+   "source": "walk_g80",
+   "episodes": 180,
+   "falls": 0,
+   "hours": 1.0
+  },
+  {
+   "class": "hard_grip",
+   "mode": "walk",
+   "source": "walk_sonic",
+   "episodes": 180,
+   "falls": 5,
+   "hours": 0.9855944444444444
+  },
+  {
+   "class": "hard_slip",
+   "mode": "lifted",
+   "source": "liftmid_g113",
+   "episodes": 10,
+   "falls": 2,
+   "hours": 0.05160555555555556
+  },
+  {
+   "class": "hard_slip",
+   "mode": "lifted",
+   "source": "liftmid_g80",
+   "episodes": 10,
+   "falls": 5,
+   "hours": 0.03905555555555555
+  },
+  {
+   "class": "hard_slip",
+   "mode": "lifted",
+   "source": "liftmid_sonic",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "hard_slip",
+   "mode": "rig",
+   "source": "rig",
+   "episodes": 54,
+   "falls": 0,
+   "hours": 0.3
+  },
+  {
+   "class": "hard_slip",
+   "mode": "stand",
+   "source": "stand",
+   "episodes": 54,
+   "falls": 0,
+   "hours": 0.3
+  },
+  {
+   "class": "hard_slip",
+   "mode": "walk",
+   "source": "walk_g113",
+   "episodes": 180,
+   "falls": 28,
+   "hours": 0.9027111111111111
+  },
+  {
+   "class": "hard_slip",
+   "mode": "walk",
+   "source": "walk_g80",
+   "episodes": 180,
+   "falls": 54,
+   "hours": 0.81905
+  },
+  {
+   "class": "hard_slip",
+   "mode": "walk",
+   "source": "walk_sonic",
+   "episodes": 180,
+   "falls": 4,
+   "hours": 0.988688888888889
+  },
+  {
+   "class": "rough",
+   "mode": "lifted",
+   "source": "liftmid_g113",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "rough",
+   "mode": "lifted",
+   "source": "liftmid_g80",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "rough",
+   "mode": "lifted",
+   "source": "liftmid_sonic",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "rough",
+   "mode": "rig",
+   "source": "rig",
+   "episodes": 54,
+   "falls": 0,
+   "hours": 0.3
+  },
+  {
+   "class": "rough",
+   "mode": "stand",
+   "source": "stand",
+   "episodes": 54,
+   "falls": 0,
+   "hours": 0.3
+  },
+  {
+   "class": "rough",
+   "mode": "walk",
+   "source": "walk_g113",
+   "episodes": 180,
+   "falls": 0,
+   "hours": 1.0
+  },
+  {
+   "class": "rough",
+   "mode": "walk",
+   "source": "walk_g80",
+   "episodes": 180,
+   "falls": 0,
+   "hours": 1.0
+  },
+  {
+   "class": "rough",
+   "mode": "walk",
+   "source": "walk_sonic",
+   "episodes": 180,
+   "falls": 2,
+   "hours": 0.99435
+  },
+  {
+   "class": "slope",
+   "mode": "lifted",
+   "source": "liftmid_g113",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "slope",
+   "mode": "lifted",
+   "source": "liftmid_g80",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "slope",
+   "mode": "lifted",
+   "source": "liftmid_sonic",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "slope",
+   "mode": "stand",
+   "source": "stand",
+   "episodes": 54,
+   "falls": 0,
+   "hours": 0.3
+  },
+  {
+   "class": "slope",
+   "mode": "walk",
+   "source": "walk_g113",
+   "episodes": 180,
+   "falls": 0,
+   "hours": 1.0
+  },
+  {
+   "class": "slope",
+   "mode": "walk",
+   "source": "walk_g80",
+   "episodes": 180,
+   "falls": 2,
+   "hours": 0.9914333333333333
+  },
+  {
+   "class": "slope",
+   "mode": "walk",
+   "source": "walk_sonic",
+   "episodes": 180,
+   "falls": 8,
+   "hours": 0.9644666666666667
+  },
+  {
+   "class": "soft",
+   "mode": "lifted",
+   "source": "liftmid_g113",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "soft",
+   "mode": "lifted",
+   "source": "liftmid_g80",
+   "episodes": 10,
+   "falls": 0,
+   "hours": 0.05555555555555555
+  },
+  {
+   "class": "soft",
+   "mode": "lifted",
+   "source": "liftmid_sonic",
+   "episodes": 10,
+   "falls": 1,
+   "hours": 0.05193333333333334
+  },
+  {
+   "class": "soft",
+   "mode": "rig",
+   "source": "rig",
+   "episodes": 54,
+   "falls": 0,
+   "hours": 0.3
+  },
+  {
+   "class": "soft",
+   "mode": "stand",
+   "source": "stand",
+   "episodes": 54,
+   "falls": 0,
+   "hours": 0.3
+  },
+  {
+   "class": "soft",
+   "mode": "walk",
+   "source": "walk_g113",
+   "episodes": 180,
+   "falls": 0,
+   "hours": 1.0
+  },
+  {
+   "class": "soft",
+   "mode": "walk",
+   "source": "walk_g80",
+   "episodes": 180,
+   "falls": 0,
+   "hours": 1.0
+  },
+  {
+   "class": "soft",
+   "mode": "walk",
+   "source": "walk_sonic",
+   "episodes": 180,
+   "falls": 2,
+   "hours": 0.9947888888888888
+  },
+  {
+   "class": "strip_grip_rough",
+   "mode": "walk",
+   "source": "walk_g113",
+   "episodes": 42,
+   "falls": 0,
+   "hours": 0.23333333333333334
+  },
+  {
+   "class": "strip_grip_rough",
+   "mode": "walk",
+   "source": "walk_g80",
+   "episodes": 42,
+   "falls": 0,
+   "hours": 0.23333333333333334
+  },
+  {
+   "class": "strip_grip_rough",
+   "mode": "walk",
+   "source": "walk_sonic",
+   "episodes": 42,
+   "falls": 0,
+   "hours": 0.23333333333333334
+  },
+  {
+   "class": "strip_grip_slip",
+   "mode": "walk",
+   "source": "walk_g113",
+   "episodes": 42,
+   "falls": 8,
+   "hours": 0.22175555555555557
+  },
+  {
+   "class": "strip_grip_slip",
+   "mode": "walk",
+   "source": "walk_g80",
+   "episodes": 42,
+   "falls": 12,
+   "hours": 0.21676666666666666
+  },
+  {
+   "class": "strip_grip_slip",
+   "mode": "walk",
+   "source": "walk_sonic",
+   "episodes": 42,
+   "falls": 1,
+   "hours": 0.22938333333333333
+  },
+  {
+   "class": "strip_grip_soft",
+   "mode": "walk",
+   "source": "walk_g113",
+   "episodes": 42,
+   "falls": 0,
+   "hours": 0.23333333333333334
+  },
+  {
+   "class": "strip_grip_soft",
+   "mode": "walk",
+   "source": "walk_g80",
+   "episodes": 42,
+   "falls": 0,
+   "hours": 0.23333333333333334
+  },
+  {
+   "class": "strip_grip_soft",
+   "mode": "walk",
+   "source": "walk_sonic",
+   "episodes": 42,
+   "falls": 3,
+   "hours": 0.22963333333333333
+  },
+  {
+   "class": "strip_slip_grip",
+   "mode": "walk",
+   "source": "walk_g113",
+   "episodes": 42,
+   "falls": 7,
+   "hours": 0.20611666666666667
+  },
+  {
+   "class": "strip_slip_grip",
+   "mode": "walk",
+   "source": "walk_g80",
+   "episodes": 42,
+   "falls": 6,
+   "hours": 0.2077222222222222
+  },
+  {
+   "class": "strip_slip_grip",
+   "mode": "walk",
+   "source": "walk_sonic",
+   "episodes": 42,
+   "falls": 0,
+   "hours": 0.23333333333333334
+  }
+ ],
+ "strip_never_touched": 21,
+ "strip_total": 504,
+ "edge_without_partial": 38,
+ "edge_total": 678
+}

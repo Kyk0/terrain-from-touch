@@ -1,0 +1,119 @@
+{
+ "press": {
+  "weight_N": 103.01,
+  "applied_max_N": 252.9,
+  "recorded_sum_at_max_N": 254.8,
+  "rel_error_median": 0.0074,
+  "rel_error_p95_abs": 0.0344,
+  "pass_2pct": false,
+  "by_phase": {
+   "settle (weight only) 0.5-1.0 s": {
+    "median": 0.0098,
+    "max_abs": 0.0399
+   },
+   "press ramp 1.5-5.0 s": {
+    "median": 0.0041,
+    "max_abs": 0.036
+   },
+   "release 5.0-6.5 s": {
+    "median": 0.012,
+    "max_abs": 0.0509
+   },
+   "hold after release 6.8-8.0 s": {
+    "median": 0.0111,
+    "max_abs": 0.047
+   }
+  }
+ },
+ "edge": {
+  "void_points_per_frame_mean": 72.0,
+  "void_Fz_mean_N": 0.057,
+  "void_Fz_std_N": 0.236,
+  "void_absFz_p99_N": 0.717,
+  "void_absFz_max_N": 1.0,
+  "sensor_noise_normal_N": 0.25,
+  "sensor_offset_std_N": 0.1,
+  "supported_points_Fz_mean_N": 1.95,
+  "pass_noise_only": true
+ },
+ "strip": {
+  "episode": "course_walk_g113_seed001",
+  "boundaries": [
+   {
+    "boundary": 0,
+    "to": 4,
+    "t0": 5.02,
+    "detected_window_end": 6.0,
+    "latency_s": 0.98
+   },
+   {
+    "boundary": 1,
+    "to": 0,
+    "t0": 12.04,
+    "detected_window_end": 12.6,
+    "latency_s": 0.56
+   },
+   {
+    "boundary": 2,
+    "to": 2,
+    "t0": 19.52,
+    "detected_window_end": 19.6,
+    "latency_s": 0.08
+   },
+   {
+    "boundary": 3,
+    "to": 1,
+    "t0": 28.5,
+    "detected_window_end": 29.2,
+    "latency_s": 0.7
+   },
+   {
+    "boundary": 4,
+    "to": 5,
+    "t0": 36.02,
+    "detected_window_end": 37.6,
+    "latency_s": 1.58
+   },
+   {
+    "boundary": 5,
+    "to": 3,
+    "t0": 44.04,
+    "detected_window_end": 45.2,
+    "latency_s": 1.16
+   },
+   {
+    "boundary": 6,
+    "to": 5,
+    "t0": 49.56,
+    "detected_window_end": 50.2,
+    "latency_s": 0.64
+   },
+   {
+    "boundary": 7,
+    "to": 4,
+    "t0": 58.52,
+    "detected_window_end": 59.4,
+    "latency_s": 0.88
+   }
+  ],
+  "checked_boundary": {
+   "boundary": 0,
+   "to": 4,
+   "t0": 5.02,
+   "detected_window_end": 6.0,
+   "latency_s": 0.98
+  },
+  "pixel_xy": [
+   255,
+   541
+  ],
+  "new_class_colour": [
+   128,
+   179,
+   122
+  ],
+  "max_channel_diff_before": 49.4,
+  "max_channel_diff_after": 5.0,
+  "pass": true
+ }
+}

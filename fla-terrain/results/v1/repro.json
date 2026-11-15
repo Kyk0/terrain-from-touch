@@ -1,0 +1,14 @@
+{
+ "summary": "max |difference| of headline numbers between results/v1_run1 (commit c79ef41) and results/v1 (commit b19d1ef577), same seeds: 0.0000 (headline_walk/terrain_f1); per metric: headline_walk/terrain_f1 0.0000, headline_walk/terrain_acc 0.0000, headline_walk/mu_mae 0.0000, headline_walk/logk_mae 0.0000, headline_walk/slope_mae 0.0000, headline_walk/support_f1 0.0000, g1_grip_slip_f1 0.0000, strip/median_latency_steps 0.0000, strip/median_latency_s 0.0000",
+ "max_abs_diff": {
+  "headline_walk/terrain_f1": 0.0,
+  "headline_walk/terrain_acc": 0.0,
+  "headline_walk/mu_mae": 0.0,
+  "headline_walk/logk_mae": 0.0,
+  "headline_walk/slope_mae": 0.0,
+  "headline_walk/support_f1": 0.0,
+  "g1_grip_slip_f1": 0.0,
+  "strip/median_latency_steps": 0.0,
+  "strip/median_latency_s": 0.0
+ }
+}

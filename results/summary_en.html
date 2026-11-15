@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terrain from Touch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* layout: one reading column, figures and tables break out slightly; numbers in mono */
+  --bg: #f4f5f3;
+  --surface: #ffffff;
+  --ink: #1b2422;
+  --muted: #5d6966;
+  --line: #d9dedb;
+  --accent: #0f6b5c;
+  --accent-soft: #d8ebe6;
+  --base: #8a9794;
+  --warn: #9a5a00;
+  --warn-soft: #f6ead3;
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131917; --surface: #1b2321; --ink: #e6ecea; --muted: #9eaaa7; --line: #2f3a37;
+    --accent: #5cc4b0; --accent-soft: #1f3a35; --base: #6f7c79; --warn: #e3b25e; --warn-soft: #3a2f18;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131917; --surface: #1b2321; --ink: #e6ecea; --muted: #9eaaa7; --line: #2f3a37;
+  --accent: #5cc4b0; --accent-soft: #1f3a35; --base: #6f7c79; --warn: #e3b25e; --warn-soft: #3a2f18;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+main { max-width: 880px; margin: 0 auto; padding: 48px 20px 80px; display: flex; flex-direction: column; gap: 44px; }
+header { display: flex; flex-direction: column; gap: 12px; }
+h1 { font-family: var(--font-display); font-weight: 600; font-size: 40px; line-height: 1.1; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--font-display); font-weight: 600; font-size: 26px; line-height: 1.2; margin: 0 0 14px; text-wrap: balance; }
+h3 { font-size: 17px; font-weight: 600; margin: 0 0 8px; }
+p { margin: 0 0 12px; }
+p:last-child { margin-bottom: 0; }
+.lede { font-size: 19px; color: var(--muted); max-width: 62ch; }
+.meta { font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
+.flag { display: inline-block; background: var(--warn-soft); color: var(--warn); border: 1px solid var(--warn); border-radius: 6px; padding: 6px 12px; font-size: 15px; font-weight: 500; align-self: flex-start; }
+section { display: flex; flex-direction: column; }
+ul { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; }
+.short { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 22px 24px; }
+.short ol { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; }
+.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: 500; }
+figure { margin: 6px 0 0; display: flex; flex-direction: column; gap: 8px; }
+video { width: 100%; max-width: 100%; border-radius: 8px; border: 1px solid var(--line); background: #000; display: block; }
+figcaption { font-size: 14.5px; color: var(--muted); }
+.chart { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; margin-top: 6px; }
+.chart-title { font-size: 15px; font-weight: 600; }
+.chart-note { font-size: 13.5px; color: var(--muted); }
+.row { display: grid; grid-template-columns: minmax(150px, 230px) 1fr 52px; gap: 12px; align-items: center; font-size: 14.5px; }
+.track { background: var(--bg); border-radius: 4px; height: 18px; overflow: hidden; }
+.bar { height: 100%; background: var(--base); border-radius: 4px; }
+.bar.hi { background: var(--accent); }
+.val { font-family: var(--font-mono); font-variant-numeric: tabular-nums; text-align: right; font-size: 14.5px; }
+.tablewrap { overflow-x: auto; margin-top: 6px; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th { font-weight: 600; font-size: 13.5px; color: var(--muted); }
+td.n, th.n { text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.best { color: var(--accent); font-weight: 500; }
+.ask { background: var(--accent-soft); border-radius: 10px; padding: 22px 24px; }
+.ask ol { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 12px; }
+.small { font-size: 14.5px; color: var(--muted); }
+@media (max-width: 520px) {
+  h1 { font-size: 32px; }
+  .row { grid-template-columns: 1fr 48px; }
+  .row .track { grid-column: 1 / -1; order: 3; }
+}
+
+nav.toc { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 22px; font-size: 15px; }
+nav.toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 32px; }
+nav.toc li { margin-bottom: 4px; break-inside: avoid; }
+a { color: var(--accent); }
+.kicker { font-family: var(--font-mono); font-size: 13px; color: var(--accent); margin-bottom: 4px; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 10px; }
+.grid2 figure { margin: 0; }
+.take { border-left: 3px solid var(--accent); padding: 4px 0 4px 14px; margin: 14px 0 0; }
+.caveat { background: var(--warn-soft); border-radius: 8px; padding: 10px 14px; font-size: 15px; margin-top: 12px; }
+h3 { margin-top: 22px; }
+td.dim { color: var(--muted); }
+tr.sep td { border-top: 2px solid var(--line); }
+@media (max-width: 640px) { .grid2 { grid-template-columns: 1fr; } nav.toc ol { columns: 1; } }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <div class="meta">FLA step 1 · Booster K1 · 15 Nov 2026</div>
+  <h1>Terrain from Touch</h1>
+  <p class="lede">Can a sensing sole tell a humanoid what it is standing on? A classifier trained and tested in simulation on the K1, with flat-foot walking and human-like heel-to-toe walking.</p>
+  <div class="flag">Simulation only. Nothing on this page comes from the real sole yet.</div>
+</header>
+
+<section class="short">
+  <h2>In short</h2>
+  <ol>
+    <li><strong>It works in simulation, and more sensor data helps a bit.</strong> Ground type: <span class="num">0.89</span> with the sole, <span class="num">0.82</span> from joints and IMU alone.</li>
+    <li><strong>The sole alone is almost as good as sole plus joints.</strong> Pressure map and shear with no joints at all: <span class="num">0.88</span>.</li>
+    <li><strong>The larger gain is support, not ground type.</strong> Knowing if a foot is in the air, on an edge or fully down: <span class="num">0.93</span> against <span class="num">0.76</span>. A lifted robot is noticed in <span class="num">0.1&nbsp;s</span> instead of <span class="num">0.3&nbsp;s</span>.</li>
+    <li><strong>A sole-only model still works on a gait it never saw.</strong> A model that also reads joints does not: <span class="num">0.53</span> against <span class="num">0.07</span> on the human-like gait.</li>
+    <li><strong>Shear adds little on a known gait and more on a new one.</strong> <span class="num">+1 to +4</span> points on a known gait, <span class="num">+6 to +12</span> on an unseen gait. The second number is still being re-checked.</li>
+    <li><strong>The sole helps more on heel-to-toe walking than on flat-foot walking.</strong> Earlier papers mostly used flat-foot walking, based on the reviewed work.</li>
+    <li><strong>This will not transfer to the real robot as it is.</strong> The pressure simulation is roughly right, the shear simulation is weak, and sand, mud or grass cannot be simulated. A real recording is needed.</li>
+  </ol>
+</section>
+
+<nav class="toc" aria-label="Contents">
+  <ol>
+    <li><a href="#setup">Experimental setup</a></li>
+    <li><a href="#inputs">Results by input</a></li>
+    <li><a href="#support">Support, lifting and edges</a></li>
+    <li><a href="#gait">A gait the model has not seen</a></li>
+    <li><a href="#flat">Flat-foot against heel-to-toe</a></li>
+    <li><a href="#shear">Shear</a></li>
+    <li><a href="#layout">How many points are needed</a></li>
+    <li><a href="#limits">Limits of the simulation</a></li>
+    <li><a href="#related">How this compares to earlier work</a></li>
+    <li><a href="#ask">Real-world validation requirements</a></li>
+    <li><a href="#next">Next</a></li>
+    <li><a href="#clips">All other clips</a></li>
+  </ol>
+</nav>
+
+<section id="setup">
+  <div class="kicker">1</div>
+  <h2>Experimental setup</h2>
+  <ul>
+    <li><strong>Robot and simulator.</strong> Booster K1 in MuJoCo.</li>
+    <li><strong>Walking.</strong> Three gaits. Two are ordinary locomotion policies that step with a flat foot (called G113 and G80 here). The third is human-like heel-to-toe walking, played through my SONIC-K1 policy from human motion clips.</li>
+    <li><strong>The sole.</strong> Simulated to be approximate the PaXini sole without its documentation. The foot is thin and rigid. Front and back carry the load, the middle does not touch. Pressure is read at 19 × 8 points per foot. Shear is read as four vectors per foot: front and back, each split into left and right halves.</li>
+    <li><strong>Surfaces.</strong> Six kinds: grippy, slippery, soft, rough, sloped, and planks with gaps where the foot can land on an edge. Plus a case where the robot is lifted off the ground.</li>
+    <li><strong>Data.</strong> My own dataset: <span class="num">6139</span> episodes, <span class="num">33</span> hours. Every moment is labelled with the ground type and whether each foot is in the air, partly supported or fully supported.</li>
+    <li><strong>The model.</strong> A small network that looks at the last second of signals and names the ground and the state of each foot. It only reads. It does not change how the robot walks.</li>
+  </ul>
+  <h3>What was compared</h3>
+  <p>The same model was trained on different inputs, with and without the robot's own joints and IMU:</p>
+  <ul>
+    <li>joints and IMU only (no sole);</li>
+    <li>four pressure blocks per foot (a very coarse sole);</li>
+    <li>the full pressure map;</li>
+    <li>each of these with and without the four shear vectors;</li>
+    <li>shear only.</li>
+  </ul>
+  <div class="grid2">
+    <figure><video controls preload="metadata" src="videos/montage_terrains.mp4"></video><figcaption>The six surfaces, flat-foot gait. First version of the sole (eight zones per foot).</figcaption></figure>
+    <figure><video controls preload="metadata" src="v2/videos/rig_press.mp4"></video><figcaption>The simulated sole on a test rig: the foot is pressed down. Color is pressure, arrows are shear. Front and back load, the middle stays empty.</figcaption></figure>
+  </div>
+</section>
+
+<section id="inputs">
+  <div class="kicker">2</div>
+  <h2>Results by input</h2>
+  <p>Walking, on surfaces and gaits the model was trained on. Scores are F1 from 0 to 1, higher is better.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Input</th><th class="n">Ground type</th><th class="n">Foot support</th></tr></thead>
+    <tbody>
+      <tr><td>Joints + IMU only</td><td class="n">0.82</td><td class="n">0.76</td></tr>
+      <tr class="sep"><td>Joints + IMU + 4 pressure blocks</td><td class="n">0.83</td><td class="n">0.81</td></tr>
+      <tr><td>Joints + IMU + 4 pressure blocks + shear</td><td class="n">0.84</td><td class="n">0.81</td></tr>
+      <tr><td>Joints + IMU + pressure map</td><td class="n">0.88</td><td class="n">0.93</td></tr>
+      <tr><td>Joints + IMU + pressure map + shear</td><td class="n best">0.89</td><td class="n best">0.94</td></tr>
+      <tr class="sep"><td>Sole only: 4 pressure blocks</td><td class="n">0.78</td><td class="n">0.79</td></tr>
+      <tr><td>Sole only: 4 pressure blocks + shear</td><td class="n">0.82</td><td class="n">0.80</td></tr>
+      <tr><td>Sole only: pressure map</td><td class="n">0.86</td><td class="n">0.92</td></tr>
+      <tr><td>Sole only: pressure map + shear</td><td class="n best">0.88</td><td class="n best">0.93</td></tr>
+      <tr><td>Sole only: shear, no pressure</td><td class="n">0.79</td><td class="n">0.75</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="take">
+    <p><strong>Reading the table.</strong> Adding the sole helps, and the pressure map helps more than coarse blocks. On ground type the gain over joints and IMU is modest: 7 points at best. The sole without any joints (0.88) is almost as good as everything together (0.89). Shear alone is about as good as joints alone.</p>
+  </div>
+  <p class="small" style="margin-top:12px">The first version of the sole had eight zones per foot and gave a similar picture: 0.80 without the sole, 0.86 with pressure, 0.86 with pressure and shear.</p>
+</section>
+
+<section id="support">
+  <div class="kicker">3</div>
+  <h2>Support, lifting and edges</h2>
+  <p>This is where the sole matters most, and it matches the two failure videos: stepping off the stage, and being lifted while the policy keeps "walking".</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>What is measured</th><th class="n">Joints + IMU</th><th class="n">+ 4 blocks</th><th class="n">+ pressure map</th></tr></thead>
+    <tbody>
+      <tr><td>Foot support state (F1)</td><td class="n">0.76</td><td class="n">0.81</td><td class="n best">0.93</td></tr>
+      <tr><td>"Foot is only partly supported" (F1)</td><td class="n">0.36</td><td class="n">0.47</td><td class="n best">0.80</td></tr>
+      <tr><td>Robot lifted: time to notice</td><td class="n">0.30 s</td><td class="n best" colspan="2">0.10 s</td></tr>
+      <tr><td>Foot on an edge for 0.3 s or longer: missed</td><td class="n">37 %</td><td class="n">27 %</td><td class="n best">2 to 3 %</td></tr>
+      <tr><td>Foot on an edge for less than 0.3 s: missed</td><td class="n" colspan="3">74 to 85 % for every input</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="grid2">
+    <figure><video controls preload="metadata" src="videos/lifted_mid_walk_g113.mp4"></video><figcaption>Lifted mid-walk at about 4 s. Forces drop to zero and the model reports both feet in the air.</figcaption></figure>
+    <figure><video controls preload="metadata" src="videos/terrain_edge_g113.mp4"></video><figcaption>Planks with gaps: feet land partly on edges.</figcaption></figure>
+    <figure><video controls preload="metadata" src="videos/failure_edge_miss_g113.mp4"></video><figcaption>A failure case: an edge contact the model misses.</figcaption></figure>
+    <figure><video controls preload="metadata" src="v2/videos/rig_edge.mp4"></video><figcaption>Test rig: the foot is set down half on an edge. Only the supported part of the sole reads pressure.</figcaption></figure>
+  </div>
+</section>
+
+<section id="gait">
+  <div class="kicker">4</div>
+  <h2>A gait the model has not seen</h2>
+  <p>Each model was trained on two gaits and tested on the third. Models that read joints learn the gait as much as the ground, so they break. A model that reads only the sole keeps part of its skill.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Ground type F1 on an unseen gait</th><th class="n">Sole only</th><th class="n">Sole + joints</th></tr></thead>
+    <tbody>
+      <tr><td>Pressure map + shear, average of the three gaits</td><td class="n best">0.63</td><td class="n">0.53</td></tr>
+      <tr><td>Pressure map, average</td><td class="n best">0.57</td><td class="n">0.51</td></tr>
+      <tr><td>4 blocks + shear, average</td><td class="n best">0.52</td><td class="n">0.37</td></tr>
+      <tr><td>4 blocks, average</td><td class="n best">0.40</td><td class="n">0.35</td></tr>
+      <tr class="sep"><td>Pressure map + shear, tested on the heel-to-toe gait</td><td class="n best">0.53</td><td class="n">0.07</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="take">
+    <p><strong>What follows.</strong> The same models score 0.78 to 0.89 on a gait they were trained on, so a new gait costs a lot in every case. The classifier has to see the controller that will run on the real robot, or it should read the sole only.</p>
+  </div>
+</section>
+
+<section id="flat">
+  <div class="kicker">5</div>
+  <h2>Flat-foot against heel-to-toe</h2>
+  <p>The robot walks about a minute across a course with all six surfaces in random order. The score is the share of time the ground type is named correctly.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Gait</th><th class="n">Joints + IMU</th><th class="n">With the sole</th><th class="n">Gain</th></tr></thead>
+    <tbody>
+      <tr><td>Flat-foot policy G113</td><td class="n">0.85</td><td class="n">0.88</td><td class="n">+3</td></tr>
+      <tr><td>Flat-foot policy G80</td><td class="n">0.80</td><td class="n">0.84</td><td class="n">+4</td></tr>
+      <tr><td>Heel-to-toe (SONIC)</td><td class="n">0.70</td><td class="n">0.81</td><td class="n best">+11</td></tr>
+      <tr class="sep"><td>All three</td><td class="n">0.79</td><td class="n">0.84</td><td class="n">+6</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="take">
+    <p><strong>What follows.</strong> On the human-like gait joints alone say less about the ground, so the sole adds more. This is one result from one set of runs, not yet a separate confirmed test.</p>
+  </div>
+  <p class="small" style="margin-top:12px">In the videos, the strips under the picture fill in as the robot walks: the true ground, then the model with the sole, then joints and IMU only, then a hand-written detector with no learning (0.31, shown only for reference). The panel on the right is the simulated sole.</p>
+  <figure><video controls preload="metadata" src="v2/videos/course_g113_seed001.mp4"></video><figcaption>Mixed course, flat-foot policy G113.</figcaption></figure>
+  <div class="grid2">
+    <figure><video controls preload="metadata" src="v2/videos/course_g80_seed000.mp4"></video><figcaption>Mixed course, flat-foot policy G80.</figcaption></figure>
+    <figure><video controls preload="metadata" src="v2/videos/course_sonic_seed005.mp4"></video><figcaption>Mixed course, heel-to-toe gait (SONIC).</figcaption></figure>
+    <figure><video controls preload="metadata" src="videos/terrain_hard_grip_g113.mp4"></video><figcaption>Grippy floor, flat-foot gait.</figcaption></figure>
+    <figure><video controls preload="metadata" src="videos/terrain_hard_grip_sonic.mp4"></video><figcaption>Grippy floor, heel-to-toe gait.</figcaption></figure>
+    <figure><video controls preload="metadata" src="videos/terrain_hard_slip_g113.mp4"></video><figcaption>Slippery floor, flat-foot gait.</figcaption></figure>
+    <figure><video controls preload="metadata" src="videos/terrain_hard_slip_sonic.mp4"></video><figcaption>Slippery floor, heel-to-toe gait.</figcaption></figure>
+  </div>
+  <div class="caveat">The walking is not robust. Every part of the course was crossed in 19 of 40 runs by G113, 22 of 40 by G80 and 6 of 40 by SONIC. Runs were scored up to the fall. The three videos are runs without a fall.</div>
+</section>
+
+<section id="shear">
+  <div class="kicker">6</div>
+  <h2>Shear</h2>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Sole-only models, ground type F1</th><th class="n">Without shear</th><th class="n">With shear</th><th class="n">Gain</th></tr></thead>
+    <tbody>
+      <tr><td>Pressure map, known gait</td><td class="n">0.86</td><td class="n">0.88</td><td class="n">+2.5</td></tr>
+      <tr><td>4 blocks, known gait</td><td class="n">0.78</td><td class="n">0.82</td><td class="n">+4</td></tr>
+      <tr class="sep"><td>Pressure map, unseen gait (average)</td><td class="n">0.57</td><td class="n">0.63</td><td class="n best">+6</td></tr>
+      <tr><td>4 blocks, unseen gait (average)</td><td class="n">0.40</td><td class="n">0.52</td><td class="n best">+12</td></tr>
+      <tr><td>Pressure map, unseen heel-to-toe gait</td><td class="n">0.42</td><td class="n">0.53</td><td class="n best">+11</td></tr>
+      <tr><td>4 blocks, unseen heel-to-toe gait</td><td class="n">0.24</td><td class="n">0.36</td><td class="n best">+12</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <ul style="margin-top:14px">
+    <li><strong>With joints in the input, shear adds about 1 point.</strong> In steady walking the horizontal force under the foot is set by how the robot moves, not by the floor, and the joints already carry that.</li>
+    <li><strong>A slippery floor is visible without the sole.</strong> Grippy against slippery from joints and IMU alone: <span class="num">0.95</span>. With the sole: <span class="num">0.97</span>.</li>
+    <li><strong>Shear matters more when the gait is new.</strong> See the lower rows of the table. This was an exploratory finding and needs a dedicated re-test.</li>
+    <li><strong>Shear clearly shows the floor when the foot slides on purpose,</strong> the way a person tests ice with a toe.</li>
+    <li><strong>The shear simulation is the weakest part.</strong> See section 8.</li>
+  </ul>
+  <div class="grid2">
+    <figure><video controls preload="metadata" src="v2/videos/rig_drag03.mp4"></video><figcaption>Test rig: foot pressed down and dragged sideways until it slides, slippery floor (friction 0.3). The four arrows are shear per block.</figcaption></figure>
+    <figure><video controls preload="metadata" src="v2/videos/rig_drag09.mp4"></video><figcaption>The same on a grippy floor (friction 0.9).</figcaption></figure>
+    <figure><video controls preload="metadata" src="v2/videos/rig_twist.mp4"></video><figcaption>Test rig: the foot is twisted in place.</figcaption></figure>
+    <figure><video controls preload="metadata" src="videos/strip_grip_slip_g113.mp4"></video><figcaption>Walking from a grippy strip onto a slippery one.</figcaption></figure>
+    <figure><video controls preload="metadata" src="v2/videos/closeup_hard_grip.mp4"></video><figcaption>Close-up of the sole while walking on a grippy floor, slowed to 0.25x.</figcaption></figure>
+    <figure><video controls preload="metadata" src="v2/videos/closeup_hard_slip.mp4"></video><figcaption>Close-up on a slippery floor, 0.25x.</figcaption></figure>
+    <figure><video controls preload="metadata" src="v2/videos/closeup_slope.mp4"></video><figcaption>Close-up on a slope, 0.25x.</figcaption></figure>
+  </div>
+  <p class="small" style="margin-top:10px">The close-ups are from the flat-foot gait. Close-ups for the heel-to-toe gait are not rendered yet.</p>
+</section>
+
+<section id="layout">
+  <div class="kicker">7</div>
+  <h2>How many points are needed</h2>
+  <ul>
+    <li><strong>So far only two layouts were compared:</strong> the full map (152 pressure points per foot) and four blocks per foot. The map is clearly better on a known setup: 0.88 against 0.83 on ground type, 0.93 against 0.81 on support.</li>
+    <li><strong>But the map's advantage depends on the simulation being right.</strong> When the same models are tested on a sole that is simulated a little differently, the map models fall apart and the block models hold up (table below).</li>
+    <li><strong>Running now:</strong> a sweep over 4, 8, 18 and 152 pressure points, each with and without shear, on known and unseen gaits, plus a version where the sensor is modelled as separate points with gaps between them, like the real one.</li>
+  </ul>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Trained on the standard sole, tested on</th><th class="n">Pressure map</th><th class="n">Map + shear</th><th class="n">4 blocks</th><th class="n">4 blocks + shear</th></tr></thead>
+    <tbody>
+      <tr><td>the same sole</td><td class="n">0.86</td><td class="n">0.88</td><td class="n">0.78</td><td class="n">0.81</td></tr>
+      <tr><td>shifted sensor settings (noise, gain, range)</td><td class="n">0.53</td><td class="n">0.60</td><td class="n">0.69</td><td class="n best">0.74</td></tr>
+      <tr><td>a different contact model for the sole</td><td class="n">0.21</td><td class="n">0.23</td><td class="n best">0.59</td><td class="n best">0.59</td></tr>
+      <tr><td>a foot-shaped point layout instead of a rectangle</td><td class="n">0.24</td><td class="n">0.21</td><td class="n best">0.76</td><td class="n">0.74</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="small" style="margin-top:10px">Ground type F1, models with joints and IMU. Values in the lower three rows are read from the chart and rounded. Chart: <a href="v2/figures/v2_fig5_sensitivity.png">v2_fig5_sensitivity.png</a>.</p>
+</section>
+
+<section id="limits">
+  <div class="kicker">8</div>
+  <h2>Limits of the simulation</h2>
+  <ul>
+    <li><strong>Materials.</strong> Sand, mud, gravel, grass and carpet cannot be simulated here. The simulator has properties (slippery, soft, uneven), not materials. A model for real ground has to be trained on real recordings.</li>
+    <li><strong>Pressure: roughly right.</strong> The total force on each foot and where its centre lies are correct. How the force spreads across the sole is not: the simulated foot is a rigid box and while walking it loads its corners, which the real sole does not show.</li>
+    <li><strong>Shear: weak.</strong> The simulator gives one horizontal force per foot. Splitting it into four blocks or into points is my own construction, in proportion to pressure. It also has no partial slip, where part of the sole grips and part slides, and that is exactly what a real shear sensor would pick up. So the shear results may not be accurate in either direction.</li>
+    <li><strong>The sensor itself.</strong> Number of points, range per point, noise and whether the real sole reports shear per point are guesses until there is documentation.</li>
+    <li><strong>Transfer.</strong> Because of all this the trained model will not work on the real sole as it is. What should carry over is the method, the comparison between inputs, and the coarse signals (totals, centre of pressure, blocks).</li>
+  </ul>
+</section>
+
+<section id="related">
+  <div class="kicker">9</div>
+  <h2>How this compares to earlier work</h2>
+  <ul>
+    <li><strong>The task is not new.</strong> Ground classification from foot sensors was done on NAO (2017), WALK-MAN (2019) and several quadrupeds.</li>
+    <li><strong>In those works extra foot data almost always helped,</strong> pressure maps most of all. These results agree: a small but steady gain over joints and IMU.</li>
+    <li><strong>Two recent humanoid papers, TactileStep and Tac4Loco,</strong> feed foot pressure into the walking policy on a Unitree G1 and go from simulation to the real robot. They got the transfer by using coarse features such as contact area and centre of pressure.</li>
+    <li><strong>What they did not do, based on the available abstracts:</strong> shear, and human-like heel-to-toe walking. Both are in this study, and both are where the results here differ from the flat-foot case.</li>
+    <li><strong>The review identified no open dataset</strong> with a humanoid's sole pressure map and ground labels.</li>
+  </ul>
+</section>
+
+<section class="ask" id="ask">
+  <div class="kicker">10</div>
+  <h2>Real-world validation requirements</h2>
+  <ol>
+    <li>PaXini documentation, SDK or simulation examples: pressure and shear channels, point layout, ranges, and adapter requirements.</li>
+    <li>A 15 to 30 minute K1 recording: standing, manual loading, and walking on two or three surfaces.</li>
+    <li>The walking controller used during recording, to account for gait dependence.</li>
+  </ol>
+</section>
+
+<section id="next">
+  <div class="kicker">11</div>
+  <h2>Next</h2>
+  <ul>
+    <li><strong>Now:</strong> finish the sweep over the number of pressure and shear points, and the re-test of shear on an unseen gait.</li>
+    <li><strong>With a real recording:</strong> compare the simulated sole with the real signal, and train a small model that makes the simulated sole read like the real one. Then repeat the shear and layout questions on something trustworthy.</li>
+    <li><strong>Towards the VLM stage:</strong> use the sole as a teacher for vision. The robot looks, steps, and the sole says what the ground was. A vision model learns to predict that before the step.</li>
+    <li><strong>Not done on purpose:</strong> changing the walk in response to the detected ground. For now this is detection only.</li>
+  </ul>
+</section>
+
+<section id="clips">
+  <div class="kicker">12</div>
+  <h2>All other clips</h2>
+  <div class="grid2">
+    <figure><video controls preload="metadata" src="videos/terrain_soft_g113.mp4"></video><figcaption>Soft ground, flat-foot gait.</figcaption></figure>
+    <figure><video controls preload="metadata" src="videos/terrain_rough_g113.mp4"></video><figcaption>Rough ground, flat-foot gait.</figcaption></figure>
+    <figure><video controls preload="metadata" src="videos/terrain_slope_g113.mp4"></video><figcaption>Slope, flat-foot gait.</figcaption></figure>
+  </div>
+  <p class="small" style="margin-top:16px">Numbers are from the second simulation run unless stated: test split, walking, mean of three training runs. Full reports: <a href="REPORT_V2.md">REPORT_V2.md</a>, <a href="REPORT.md">REPORT.md</a>. All tables: <a href="v2/tables_v2.md">tables_v2.md</a>. Charts: <a href="v2/figures/v2_fig1_combinations.png">inputs</a>, <a href="v2/figures/v2_fig2_partial_support.png">partial support</a>, <a href="v2/figures/v2_fig3_unseen_gait.png">unseen gait</a>, <a href="v2/figures/v2_fig4_course.png">course</a>.</p>
+</section>
+
+</main>
+</body>
+</html>

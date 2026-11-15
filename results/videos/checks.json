@@ -1,0 +1,187 @@
+{
+ "backend": "egl",
+ "clips": [
+  {
+   "clip": "failure_edge_miss_g113",
+   "frames": 300,
+   "duration_s": 10.0,
+   "frames_marked_wrong": 93,
+   "mean_sum_fz_both_full_N": null,
+   "mean_sum_fz_all_frames_N": 179.86527849833172,
+   "weight_N": 192.92346,
+   "standing_sum_fz_N": 190.18199157714844
+  },
+  {
+   "clip": "lifted_mid_walk_g113",
+   "frames": 300,
+   "duration_s": 10.0,
+   "frames_marked_wrong": 49,
+   "mean_sum_fz_both_full_N": 184.9191357647931,
+   "mean_sum_fz_all_frames_N": 118.00144484510024,
+   "weight_N": 192.92346,
+   "standing_sum_fz_N": 196.5506591796875,
+   "lift": {
+    "t_airborne": 4.179999828338623,
+    "max_sum_fz_while_airborne_N": 1.7000000476837158,
+    "frames": 86
+   }
+  },
+  {
+   "clip": "strip_grip_slip_g113",
+   "frames": 300,
+   "duration_s": 10.0,
+   "frames_marked_wrong": 41,
+   "mean_sum_fz_both_full_N": 174.6304484147292,
+   "mean_sum_fz_all_frames_N": 157.90000032571456,
+   "weight_N": 192.92346,
+   "standing_sum_fz_N": 189.93800354003906,
+   "strip": {
+    "t_change": 6.4,
+    "t_detect_reported": 6.800000095367432,
+    "latency_reported_s": 0.40000009536743164,
+    "first_video_time_showing_new_class": 6.799999999999473,
+    "pred_before_change_all_old": true
+   }
+  },
+  {
+   "clip": "terrain_edge_g113",
+   "frames": 300,
+   "duration_s": 10.0,
+   "frames_marked_wrong": 137,
+   "mean_sum_fz_both_full_N": 186.51309313092912,
+   "mean_sum_fz_all_frames_N": 178.34616628944875,
+   "weight_N": 192.92346,
+   "standing_sum_fz_N": 193.8380126953125
+  },
+  {
+   "clip": "terrain_hard_grip_g113",
+   "frames": 300,
+   "duration_s": 10.0,
+   "frames_marked_wrong": 24,
+   "mean_sum_fz_both_full_N": 172.67431715668224,
+   "mean_sum_fz_all_frames_N": 183.4837217711409,
+   "weight_N": 192.92346,
+   "standing_sum_fz_N": 196.22998046875
+  },
+  {
+   "clip": "terrain_hard_grip_sonic",
+   "frames": 300,
+   "duration_s": 10.0,
+   "frames_marked_wrong": 0,
+   "mean_sum_fz_both_full_N": 190.64948312031854,
+   "mean_sum_fz_all_frames_N": 188.8684995015462,
+   "weight_N": 192.92346
+  },
+  {
+   "clip": "terrain_hard_slip_g113",
+   "frames": 300,
+   "duration_s": 10.0,
+   "frames_marked_wrong": 0,
+   "mean_sum_fz_both_full_N": 193.01190389905656,
+   "mean_sum_fz_all_frames_N": 175.60916664491097,
+   "weight_N": 192.92346,
+   "standing_sum_fz_N": 194.0586700439453
+  },
+  {
+   "clip": "terrain_hard_slip_sonic",
+   "frames": 300,
+   "duration_s": 10.0,
+   "frames_marked_wrong": 0,
+   "mean_sum_fz_both_full_N": 199.51966117813203,
+   "mean_sum_fz_all_frames_N": 183.6033335538457,
+   "weight_N": 192.92346
+  },
+  {
+   "clip": "terrain_rough_g113",
+   "frames": 300,
+   "duration_s": 10.0,
+   "frames_marked_wrong": 162,
+   "mean_sum_fz_both_full_N": 174.81815487997872,
+   "mean_sum_fz_all_frames_N": 181.0528891053796,
+   "weight_N": 192.92346,
+   "standing_sum_fz_N": 194.29800415039062
+  },
+  {
+   "clip": "terrain_slope_g113",
+   "frames": 300,
+   "duration_s": 10.0,
+   "frames_marked_wrong": 6,
+   "mean_sum_fz_both_full_N": 224.35403870091295,
+   "mean_sum_fz_all_frames_N": 183.39061012268067,
+   "weight_N": 192.92346,
+   "standing_sum_fz_N": 187.61732482910156
+  },
+  {
+   "clip": "terrain_soft_g113",
+   "frames": 300,
+   "duration_s": 10.0,
+   "frames_marked_wrong": 6,
+   "mean_sum_fz_both_full_N": 225.0615366422213,
+   "mean_sum_fz_all_frames_N": 193.84116640726725,
+   "weight_N": 192.92346,
+   "standing_sum_fz_N": 192.2939910888672
+  }
+ ],
+ "files": {
+  "failure_edge_miss_g113": {
+   "frames": 300,
+   "stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 3629 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+   "bytes": 4542014
+  },
+  "lifted_mid_walk_g113": {
+   "frames": 300,
+   "stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 1556 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+   "bytes": 1950723
+  },
+  "montage_terrains": {
+   "frames": 300,
+   "stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 3462 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+   "bytes": 4332216
+  },
+  "strip_grip_slip_g113": {
+   "frames": 300,
+   "stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 1786 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+   "bytes": 2236998
+  },
+  "terrain_edge_g113": {
+   "frames": 300,
+   "stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 3456 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+   "bytes": 4324639
+  },
+  "terrain_hard_grip_g113": {
+   "frames": 300,
+   "stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 1507 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+   "bytes": 1888392
+  },
+  "terrain_hard_grip_sonic": {
+   "frames": 300,
+   "stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 1379 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+   "bytes": 1729292
+  },
+  "terrain_hard_slip_g113": {
+   "frames": 300,
+   "stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 1843 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+   "bytes": 2308376
+  },
+  "terrain_hard_slip_sonic": {
+   "frames": 300,
+   "stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 1578 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+   "bytes": 1978007
+  },
+  "terrain_rough_g113": {
+   "frames": 300,
+   "stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 3106 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+   "bytes": 3888208
+  },
+  "terrain_slope_g113": {
+   "frames": 300,
+   "stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 1490 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+   "bytes": 1867971
+  },
+  "terrain_soft_g113": {
+   "frames": 300,
+   "stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 1527 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+   "bytes": 1914339
+  }
+ }
+}

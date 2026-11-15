@@ -1,0 +1,13 @@
+# not shared: prompts for the coding agents
+briefs/
+*BRIEF*.md
+# scratch
+_to_delete/
+# junk
+.DS_Store
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+MUJOCO_LOG.TXT
+fla-terrain/logs/

@@ -1,0 +1,392 @@
+{
+ "test": {
+  "M1": 0.06054263269210708,
+  "acc": 0.10914353822577899,
+  "M2": 0.5752553538252616,
+  "M2_partial": 0.15130668277100934,
+  "M3": 0.3198564946651459,
+  "M3_grip_slip": 0.46638956665992737,
+  "logk_mae": 1.4962637424468994,
+  "slope_mae_deg": 2.5012495517730713,
+  "G1_1": 0.0015356481227602947,
+  "M4_s": 5.0,
+  "M4_steps": 8.0,
+  "M4_miss": 0.956989247311828,
+  "M4_n": 93,
+  "M6_s": NaN,
+  "M6_miss": NaN,
+  "support_f1_per_class": [
+   0.75401565159199,
+   0.15130668277100934,
+   0.8204437271127855
+  ],
+  "confusion_walk": [
+   [
+    1,
+    4,
+    0,
+    52,
+    789,
+    6822
+   ],
+   [
+    0,
+    6,
+    0,
+    35,
+    906,
+    6257
+   ],
+   [
+    0,
+    6,
+    8,
+    87,
+    653,
+    5541
+   ],
+   [
+    0,
+    0,
+    0,
+    91,
+    410,
+    5684
+   ],
+   [
+    3,
+    6,
+    0,
+    10,
+    610,
+    3911
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    216,
+    3130
+   ]
+  ],
+  "by_mode": {
+   "walk": {
+    "n": 41081,
+    "terrain_f1": 0.06054263269210708,
+    "terrain_acc": 0.10914353822577899,
+    "confusion": [
+     [
+      1,
+      4,
+      0,
+      52,
+      789,
+      6822
+     ],
+     [
+      0,
+      6,
+      0,
+      35,
+      906,
+      6257
+     ],
+     [
+      0,
+      6,
+      8,
+      87,
+      653,
+      5541
+     ],
+     [
+      0,
+      0,
+      0,
+      91,
+      410,
+      5684
+     ],
+     [
+      3,
+      6,
+      0,
+      10,
+      610,
+      3911
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      216,
+      3130
+     ]
+    ],
+    "mu_mae": 0.3198564946651459,
+    "logk_mae": 1.4962637424468994,
+    "slope_mae": 2.5012495517730713,
+    "mu_mae_grip_slip": 0.46638956665992737,
+    "logk_mae_soft": 4.743431568145752,
+    "support_f1": 0.5752553538252616,
+    "support_f1_present": 0.5752553538252616,
+    "support_f1_per_class": [
+     0.75401565159199,
+     0.15130668277100934,
+     0.8204437271127855
+    ]
+   }
+  },
+  "by_band_walk": {
+   "test_in": {
+    "n": 13147,
+    "terrain_f1": 0.06927393293944045,
+    "terrain_acc": 0.12952105383385365,
+    "confusion": [
+     [
+      1,
+      0,
+      0,
+      40,
+      321,
+      2638
+     ],
+     [
+      0,
+      5,
+      0,
+      32,
+      400,
+      3117
+     ],
+     [
+      0,
+      6,
+      0,
+      6,
+      91,
+      849
+     ],
+     [
+      0,
+      0,
+      0,
+      22,
+      181,
+      2097
+     ],
+     [
+      3,
+      6,
+      0,
+      9,
+      298,
+      1536
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      100,
+      1375
+     ]
+    ],
+    "mu_mae": 0.26166775822639465,
+    "logk_mae": 1.0867853164672852,
+    "slope_mae": 2.539454936981201,
+    "mu_mae_grip_slip": 0.41323861479759216,
+    "logk_mae_soft": 4.657390594482422,
+    "support_f1": 0.582374222491503,
+    "support_f1_present": 0.582374222491503,
+    "support_f1_per_class": [
+     0.755960766265856,
+     0.1759391676410798,
+     0.8152227335675732
+    ]
+   },
+   "test_out": {
+    "n": 22222,
+    "terrain_f1": 0.05465258698395294,
+    "terrain_acc": 0.09703686948654151,
+    "confusion": [
+     [
+      0,
+      4,
+      0,
+      12,
+      468,
+      4184
+     ],
+     [
+      0,
+      1,
+      0,
+      3,
+      506,
+      3140
+     ],
+     [
+      0,
+      0,
+      8,
+      81,
+      562,
+      4692
+     ],
+     [
+      0,
+      0,
+      0,
+      69,
+      229,
+      3587
+     ],
+     [
+      0,
+      0,
+      0,
+      1,
+      312,
+      2375
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      116,
+      1755
+     ]
+    ],
+    "mu_mae": 0.35442596673965454,
+    "logk_mae": 1.7395318746566772,
+    "slope_mae": 2.4785516262054443,
+    "mu_mae_grip_slip": 0.5084518790245056,
+    "logk_mae_soft": 4.758767604827881,
+    "support_f1": 0.5775065693706294,
+    "support_f1_present": 0.5775065693706294,
+    "support_f1_per_class": [
+     0.7538256679122637,
+     0.15886334097205596,
+     0.8198306992275686
+    ]
+   }
+  },
+  "strip_per_type": {
+   "strip_grip_rough": {
+    "n": 23,
+    "median_latency_s": 5.0,
+    "median_latency_steps": 7.0,
+    "miss_rate": 0.8260869565217391
+   },
+   "strip_grip_slip": {
+    "n": 24,
+    "median_latency_s": 5.0,
+    "median_latency_steps": 9.5,
+    "miss_rate": 1.0
+   },
+   "strip_grip_soft": {
+    "n": 23,
+    "median_latency_s": 5.0,
+    "median_latency_steps": 9.0,
+    "miss_rate": 1.0
+   },
+   "strip_slip_grip": {
+    "n": 23,
+    "median_latency_s": 5.0,
+    "median_latency_steps": 8.0,
+    "miss_rate": 1.0
+   }
+  },
+  "M5_long_miss": 0.23691460055096414,
+  "M5_long_delay_s": 0.19999980926513672,
+  "M5_short_miss": 0.8732394366197183,
+  "M5_short_delay_s": 0.039999961853027344,
+  "M5_n": {
+   "short": 213,
+   "long": 363
+  },
+  "hard_mid": {
+   "windows": 5712,
+   "mu_mae": 0.4606188237667084,
+   "assigned": {
+    "hard_grip": 0.0,
+    "hard_slip": 0.0008753501400560224,
+    "soft": 0.0,
+    "rough": 0.0024509803921568627,
+    "slope": 0.10031512605042017,
+    "edge": 0.896358543417367
+   }
+  },
+  "ground_analysis": {
+   "rough": {
+    "with": {
+     "n": 3796,
+     "recall": 0.021338250790305584
+    },
+    "without": {
+     "n": 2389,
+     "recall": 0.004185851820845542
+    }
+   },
+   "edge": {
+    "with": {
+     "n": 2112,
+     "recall": 0.9564393939393939
+    },
+    "without": {
+     "n": 1234,
+     "recall": 0.899513776337115
+    }
+   }
+  },
+  "in_dist_M1": 0.8554453488046644,
+  "M5_float_old": {
+   "M5_long_miss": 0.23691460055096414,
+   "M5_long_delay_s": 0.19999980926513672,
+   "M5_short_miss": 0.8732394366197183,
+   "M5_short_delay_s": 0.039999961853027344,
+   "M5_n": {
+    "short": 213,
+    "long": 363
+   }
+  },
+  "M5_rule": "long = >= 15 frames at 50 Hz (A11)",
+  "M5_recomputed_at": "c9cda26c6cf6c4fb550f712b49bbf810e353f283"
+ },
+ "val_M1": 0.8814881049246477,
+ "job": {
+  "sources": [
+   "walk_g113",
+   "walk_g80",
+   "walk_sonic"
+  ],
+  "kind": "logo",
+  "held": "walk_sonic",
+  "view": "P+Nreal+Sblk",
+  "seed": 1,
+  "name": "logo_walk_sonic/P+Nreal+Sblk_s1",
+  "result": "results/v2/src3/jobs/logo_walk_sonic/P+Nreal+Sblk_s1.json"
+ },
+ "train_info": {
+  "best_epoch": 1,
+  "val_loss": 0.8837690561827363,
+  "epochs_run": 7,
+  "train_s": 233.99574828147888,
+  "n_params": 349439
+ },
+ "model_dir": "/path/to/fla-terrain/models/v2_src3/logo_walk_sonic/P+Nreal+Sblk_s1",
+ "wall_s": 243.54999613761902,
+ "provenance": {
+  "git_commit_training_code": "0b2624d0c5e6d3f586ade14dce958a9f1425c858",
+  "git_dirty_at_launch": false,
+  "model_config_git_at_save": "c9cda26c6cf6c4fb550f712b49bbf810e353f283",
+  "model_config_dirty_at_save": false,
+  "m5_recomputed_at": "38b230f32e0261e17f21716cc9d2841092331cef",
+  "m5_recompute_tree_clean": true,
+  "note": "see results/v2/src3/PROVENANCE.md"
+ }
+}

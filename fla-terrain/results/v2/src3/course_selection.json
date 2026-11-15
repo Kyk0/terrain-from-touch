@@ -1,0 +1,25 @@
+{
+ "rule": "D14 q5: sole model (ten Ck and P+Ck) with the highest mean M1 on the walk windows of the validation split",
+ "val_M1_mean": {
+  "P+Nreal+Sreal": 0.8753656735765093,
+  "P+Nreal+Sblk": 0.8844286997862807,
+  "P+Nreal": 0.8794740045688351,
+  "P+Nblk+Sblk": 0.8351999496592889,
+  "P+Nblk": 0.8321456571095309,
+  "Nreal+Sreal": 0.8749730554420565,
+  "Nreal+Sblk": 0.8771803230023312,
+  "Nreal": 0.8535272697144602,
+  "Nblk+Sblk": 0.8215949795375413,
+  "Nblk": 0.7864866598061614
+ },
+ "selected": "P+Nreal+Sblk",
+ "selected_name": "P+C2",
+ "written_before_any_course_prediction": true,
+ "time": "2026-11-14 13:04:34",
+ "git": "c9cda26c6cf6c4fb550f712b49bbf810e353f283",
+ "_provenance": {
+  "git_commit": "c9cda26c6cf6c4fb550f712b49bbf810e353f283",
+  "git_dirty": false,
+  "stage": "follow-up run (run_v2.py --stages sens,sens_nosat,select,course,tables)"
+ }
+}

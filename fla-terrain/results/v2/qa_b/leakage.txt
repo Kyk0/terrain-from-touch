@@ -1,0 +1,11 @@
+episodes per set: v2 6139, v2_course 120, v2_sens/g1 288, v2_sens/nominal 1455, v2_sens/nominal_regen 12, v2_sens/nosat 1455, v2_sens/pads 288, v2_sens/shifted 288
+split_key shared between splits (all sets pooled): train-val 0, train-test 0, val-test 0
+identical raw arrays (joint_pos+gyro first 4 s) in two splits: 0
+band names not starting with their split: 0
+hard_mid episodes 180: splits ['test']; their split_keys in train/val: 0
+course episodes 120: splits ['test']; their split_keys in train/val: 0
+sensitivity episodes 3786: splits {'train': 2056, 'val': 288, 'test': 1442}; test split_keys of v2_sens shared with v2 train/val: 0
+mu_grip: train n 4440 range 0.7-1.1; val n 659 range 0.82-0.84, shared with train 0, min gap 0.02008; test n 1900 range 0.97-1.3, shared with train 0, min gap 0.02002
+mu_slip: train n 961 range 0.14-0.3595; val n 146 range 0.2051-0.215, shared with train 0, min gap 0.01509; test n 425 range 0.08022-0.295, shared with train 0, min gap 0.01507
+stiffness_soft: train n 871 range 1.1e+04-1.078e+05; val n 128 range 3.805e+04-4.428e+04, shared with train 0, min gap 7404; test n 344 range 8301-1.619e+04, shared with train 0, min gap 1078
+mu_mid: train n 0; test n 180 range 0.3603-0.7 (no train values)

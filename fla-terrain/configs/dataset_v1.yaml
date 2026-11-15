@@ -1,0 +1,36 @@
+# FLA-0 dataset v1 plan. Expanded by scripts/gen_dataset.py into one task per episode.
+# Each group: classes (or class:variant), sources, total hours per class, split ratios (train/val/test, by band).
+# Episodes are 20 s. Episode counts per (class, source) are split by largest remainder.
+seconds: 20
+seed: 1001
+groups:
+  walk:       # headline data: 6 classes x 3 h, evenly over the three gaits
+    classes: [hard_grip, hard_slip, soft, rough, slope, "edge:planks", "edge:steps"]
+    hours: {default: 3.0, "edge:planks": 1.5, "edge:steps": 1.5}
+    sources: [walk_g113, walk_g80, walk_sonic]
+    splits: [0.7, 0.1, 0.2]
+  strip:      # surface changes, test-heavy (latency is measured on test)
+    classes: [strip_grip_slip, strip_slip_grip, strip_grip_soft, strip_grip_rough]
+    hours: {default: 0.7}
+    sources: [walk_g113, walk_g80, walk_sonic]
+    splits: [0.5, 0.1, 0.4]
+  lifted:     # held above the ground for the whole episode (terrain label -1)
+    classes: [hard_grip]
+    hours: {default: 0.3}
+    sources: [lifted_g113, lifted_g80, lifted_sonic]
+    splits: [0.7, 0.1, 0.2]
+  liftmid:    # walk, lifted for 2-4 s, put down (lifted detection delay)
+    classes: [hard_grip, hard_slip, soft, rough, slope, "edge:planks"]
+    hours: {default: 0.1667}
+    sources: [liftmid_g113, liftmid_g80, liftmid_sonic]
+    splits: [0.7, 0.1, 0.2]
+  stand:      # PD stand with weight shifts, squats, ankle rolls
+    classes: [hard_grip, hard_slip, soft, rough, slope, "edge:planks", "edge:steps"]
+    hours: {default: 0.3, "edge:planks": 0.15, "edge:steps": 0.15}
+    sources: [stand]
+    splits: [0.7, 0.1, 0.2]
+  rig:        # foot-only rig: load, tilt, sliding velocity, lift-offs; edge = overhang over plank gaps
+    classes: [hard_grip, hard_slip, soft, rough, "edge:planks"]
+    hours: {default: 0.3}
+    sources: [rig]
+    splits: [0.7, 0.1, 0.2]

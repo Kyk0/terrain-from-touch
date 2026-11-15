@@ -1,0 +1,14 @@
+{
+ "text": "Support errors (P+N, 3 seeds, walk test): airborne<->full confusions are 0.61 % of non-partial windows; 75 % of them are at a GT label transition (touchdown / lift-off frame: the frame-mean true Fz crosses the 2 N contact threshold within the 20 ms frame; sensor total Fz there, median 3.8 N). The 'full' F1 is lowered mainly by full->partial predictions (3.2 % of full windows, 10 % at transitions), consistent with the a-priori partial class weight (x3). No label or code bug found; labels and weights unchanged.",
+ "stats": {
+  "af": 2724.0,
+  "af_trans": 2053.0,
+  "af_fz": 3.7833333015441895,
+  "nonpartial": 446526.0,
+  "fp": 8505.0,
+  "full": 268038.0,
+  "fp_trans": 839.0
+ },
+ "git_commit": "b19d1ef577c7d0ff4f1bfc94d5d7311bbe6e7aad",
+ "git_dirty": false
+}

@@ -1,0 +1,23 @@
+{
+ "episode": "course_walk_sonic_seed005",
+ "identical_to_dataset": true,
+ "differing_arrays": [],
+ "n_video_frames": 2349,
+ "seconds": 90.0,
+ "task": {
+  "terrain": "course",
+  "variant": null,
+  "source": "walk_sonic",
+  "split": "test",
+  "seconds": 90.0,
+  "seed": 3201,
+  "index": 5,
+  "episode_id": "course_walk_sonic_seed005",
+  "split_key": "course_walk_sonic_seed005",
+  "group": "course",
+  "sole": "v2",
+  "sole_setting": "random",
+  "course_seed": 5,
+  "course_auto_T": true
+ }
+}

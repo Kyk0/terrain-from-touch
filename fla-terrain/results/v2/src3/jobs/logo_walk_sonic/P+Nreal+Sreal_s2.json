@@ -1,0 +1,392 @@
+{
+ "test": {
+  "M1": 0.10245771835990507,
+  "acc": 0.14901526760883138,
+  "M2": 0.47169714702297394,
+  "M2_partial": 0.10701109486309181,
+  "M3": 0.29040470719337463,
+  "M3_grip_slip": 0.41544273495674133,
+  "logk_mae": 2.2590575218200684,
+  "slope_mae_deg": 6.662783622741699,
+  "G1_1": 0.005240174672489083,
+  "M4_s": 5.0,
+  "M4_steps": 8.0,
+  "M4_miss": 0.8924731182795699,
+  "M4_n": 93,
+  "M6_s": NaN,
+  "M6_miss": NaN,
+  "support_f1_per_class": [
+   0.6385205958523117,
+   0.10701109486309181,
+   0.6695597503535184
+  ],
+  "confusion_walk": [
+   [
+    0,
+    22,
+    8,
+    68,
+    4753,
+    2817
+   ],
+   [
+    0,
+    88,
+    0,
+    140,
+    4289,
+    2687
+   ],
+   [
+    0,
+    17,
+    52,
+    63,
+    5262,
+    901
+   ],
+   [
+    0,
+    7,
+    0,
+    571,
+    4230,
+    1377
+   ],
+   [
+    0,
+    11,
+    1,
+    32,
+    3317,
+    1179
+   ],
+   [
+    0,
+    9,
+    0,
+    57,
+    2057,
+    1223
+   ]
+  ],
+  "by_mode": {
+   "walk": {
+    "n": 41081,
+    "terrain_f1": 0.10245771835990507,
+    "terrain_acc": 0.14901526760883138,
+    "confusion": [
+     [
+      0,
+      22,
+      8,
+      68,
+      4753,
+      2817
+     ],
+     [
+      0,
+      88,
+      0,
+      140,
+      4289,
+      2687
+     ],
+     [
+      0,
+      17,
+      52,
+      63,
+      5262,
+      901
+     ],
+     [
+      0,
+      7,
+      0,
+      571,
+      4230,
+      1377
+     ],
+     [
+      0,
+      11,
+      1,
+      32,
+      3317,
+      1179
+     ],
+     [
+      0,
+      9,
+      0,
+      57,
+      2057,
+      1223
+     ]
+    ],
+    "mu_mae": 0.29040470719337463,
+    "logk_mae": 2.2590575218200684,
+    "slope_mae": 6.662783622741699,
+    "mu_mae_grip_slip": 0.41544273495674133,
+    "logk_mae_soft": 5.774367332458496,
+    "support_f1": 0.47169714702297394,
+    "support_f1_present": 0.47169714702297394,
+    "support_f1_per_class": [
+     0.6385205958523117,
+     0.10701109486309181,
+     0.6695597503535184
+    ]
+   }
+  },
+  "by_band_walk": {
+   "test_in": {
+    "n": 13147,
+    "terrain_f1": 0.11065726154119236,
+    "terrain_acc": 0.16340516256757787,
+    "confusion": [
+     [
+      0,
+      9,
+      4,
+      24,
+      1925,
+      1038
+     ],
+     [
+      0,
+      31,
+      0,
+      70,
+      2168,
+      1285
+     ],
+     [
+      0,
+      6,
+      11,
+      22,
+      791,
+      122
+     ],
+     [
+      0,
+      0,
+      0,
+      257,
+      1475,
+      568
+     ],
+     [
+      0,
+      11,
+      1,
+      28,
+      1371,
+      441
+     ],
+     [
+      0,
+      0,
+      0,
+      34,
+      965,
+      476
+     ]
+    ],
+    "mu_mae": 0.23436984419822693,
+    "logk_mae": 1.7858332395553589,
+    "slope_mae": 6.522602081298828,
+    "mu_mae_grip_slip": 0.361126571893692,
+    "logk_mae_soft": 5.665983200073242,
+    "support_f1": 0.4917173991144429,
+    "support_f1_present": 0.4917173991144429,
+    "support_f1_per_class": [
+     0.6626750512048545,
+     0.1203472311154205,
+     0.6921299150230535
+    ]
+   },
+   "test_out": {
+    "n": 22222,
+    "terrain_f1": 0.09838075951002866,
+    "terrain_acc": 0.14046595792807057,
+    "confusion": [
+     [
+      0,
+      13,
+      4,
+      44,
+      2828,
+      1779
+     ],
+     [
+      0,
+      57,
+      0,
+      70,
+      2121,
+      1402
+     ],
+     [
+      0,
+      11,
+      41,
+      41,
+      4471,
+      779
+     ],
+     [
+      0,
+      7,
+      0,
+      314,
+      2755,
+      809
+     ],
+     [
+      0,
+      0,
+      0,
+      4,
+      1946,
+      738
+     ],
+     [
+      0,
+      9,
+      0,
+      23,
+      1092,
+      747
+     ]
+    ],
+    "mu_mae": 0.3236946165561676,
+    "logk_mae": 2.540196180343628,
+    "slope_mae": 6.74606466293335,
+    "mu_mae_grip_slip": 0.4584271311759949,
+    "logk_mae_soft": 5.793686389923096,
+    "support_f1": 0.4604781842232222,
+    "support_f1_present": 0.4604781842232222,
+    "support_f1_per_class": [
+     0.6165891118786051,
+     0.11382232346776006,
+     0.6510231173233014
+    ]
+   }
+  },
+  "strip_per_type": {
+   "strip_grip_rough": {
+    "n": 23,
+    "median_latency_s": 5.0,
+    "median_latency_steps": 7.0,
+    "miss_rate": 0.6956521739130435
+   },
+   "strip_grip_slip": {
+    "n": 24,
+    "median_latency_s": 5.0,
+    "median_latency_steps": 9.5,
+    "miss_rate": 0.875
+   },
+   "strip_grip_soft": {
+    "n": 23,
+    "median_latency_s": 5.0,
+    "median_latency_steps": 9.0,
+    "miss_rate": 1.0
+   },
+   "strip_slip_grip": {
+    "n": 23,
+    "median_latency_s": 5.0,
+    "median_latency_steps": 8.0,
+    "miss_rate": 1.0
+   }
+  },
+  "M5_long_miss": 0.6528925619834711,
+  "M5_long_delay_s": 0.26000022888183594,
+  "M5_short_miss": 0.9389671361502347,
+  "M5_short_delay_s": 0.039999961853027344,
+  "M5_n": {
+   "short": 213,
+   "long": 363
+  },
+  "hard_mid": {
+   "windows": 5712,
+   "mu_mae": 0.38418176770210266,
+   "assigned": {
+    "hard_grip": 0.0,
+    "hard_slip": 0.0063025210084033615,
+    "soft": 0.0,
+    "rough": 0.006127450980392157,
+    "slope": 0.6286764705882353,
+    "edge": 0.3588935574229692
+   }
+  },
+  "ground_analysis": {
+   "rough": {
+    "with": {
+     "n": 3796,
+     "recall": 0.13909378292939936
+    },
+    "without": {
+     "n": 2389,
+     "recall": 0.01799916282963583
+    }
+   },
+   "edge": {
+    "with": {
+     "n": 2112,
+     "recall": 0.36742424242424243
+    },
+    "without": {
+     "n": 1234,
+     "recall": 0.36223662884927066
+    }
+   }
+  },
+  "in_dist_M1": 0.8464441417453964,
+  "M5_float_old": {
+   "M5_long_miss": 0.6528925619834711,
+   "M5_long_delay_s": 0.26000022888183594,
+   "M5_short_miss": 0.9389671361502347,
+   "M5_short_delay_s": 0.039999961853027344,
+   "M5_n": {
+    "short": 213,
+    "long": 363
+   }
+  },
+  "M5_rule": "long = >= 15 frames at 50 Hz (A11)",
+  "M5_recomputed_at": "c9cda26c6cf6c4fb550f712b49bbf810e353f283"
+ },
+ "val_M1": 0.8822425265143155,
+ "job": {
+  "sources": [
+   "walk_g113",
+   "walk_g80",
+   "walk_sonic"
+  ],
+  "kind": "logo",
+  "held": "walk_sonic",
+  "view": "P+Nreal+Sreal",
+  "seed": 2,
+  "name": "logo_walk_sonic/P+Nreal+Sreal_s2",
+  "result": "results/v2/src3/jobs/logo_walk_sonic/P+Nreal+Sreal_s2.json"
+ },
+ "train_info": {
+  "best_epoch": 1,
+  "val_loss": 0.8721780941403617,
+  "epochs_run": 7,
+  "train_s": 253.99452543258667,
+  "n_params": 341023
+ },
+ "model_dir": "/path/to/fla-terrain/models/v2_src3/logo_walk_sonic/P+Nreal+Sreal_s2",
+ "wall_s": 263.20411229133606,
+ "provenance": {
+  "git_commit_training_code": "0b2624d0c5e6d3f586ade14dce958a9f1425c858",
+  "git_dirty_at_launch": false,
+  "model_config_git_at_save": "c9cda26c6cf6c4fb550f712b49bbf810e353f283",
+  "model_config_dirty_at_save": false,
+  "m5_recomputed_at": "38b230f32e0261e17f21716cc9d2841092331cef",
+  "m5_recompute_tree_clean": true,
+  "note": "see results/v2/src3/PROVENANCE.md"
+ }
+}

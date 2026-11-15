@@ -1,0 +1,43 @@
+# FLA-0 dataset v2 (A8): sole v2, per-episode randomized sole/sensor parameters, 20 s episodes.
+# hours_per_source = hours per class PER SOURCE: the new velocity policy is appended later as a 4th source
+# (add it to `sources`) without regenerating or re-splitting anything else (episode ids are per source).
+seconds: 20
+seed: 3001
+sole: v2
+sole_setting: random
+groups:
+  walk:        # six v1 classes, v1 bands, 70/10/20 by band: 4 h per class (edge: planks + steps)
+    classes: [hard_grip, hard_slip, soft, rough, slope, "edge:planks", "edge:steps"]
+    hours_per_source: {default: 1.3333, "edge:planks": 0.6667, "edge:steps": 0.6667}
+    sources: [walk_g113, walk_g80, walk_sonic]
+    splits: [0.7, 0.1, 0.2]
+  strip:       # surface changes (M4), test-heavy: 1 h per type
+    classes: [strip_grip_slip, strip_slip_grip, strip_grip_soft, strip_grip_rough]
+    hours_per_source: {default: 0.3333}
+    sources: [walk_g113, walk_g80, walk_sonic]
+    splits: [0.5, 0.1, 0.4]
+  hardmid:     # friction 0.36-0.70, no terrain label, TEST ONLY (D14)
+    classes: [hard_mid]
+    hours_per_source: {default: 0.3333}
+    sources: [walk_g113, walk_g80, walk_sonic]
+    splits: [0.0, 0.0, 1.0]
+  lifted:
+    classes: [hard_grip]
+    hours_per_source: {default: 0.1}
+    sources: [lifted_g113, lifted_g80, lifted_sonic]
+    splits: [0.7, 0.1, 0.2]
+  liftmid:     # M6 lifted delay
+    classes: [hard_grip, hard_slip, soft, rough, slope, "edge:planks"]
+    hours_per_source: {default: 0.0667}
+    sources: [liftmid_g113, liftmid_g80, liftmid_sonic]
+    splits: [0.7, 0.1, 0.2]
+  stand:
+    classes: [hard_grip, hard_slip, soft, rough, slope, "edge:planks", "edge:steps"]
+    hours_per_source: {default: 0.35, "edge:planks": 0.175, "edge:steps": 0.175}
+    sources: [stand]
+    splits: [0.7, 0.1, 0.2]
+  rig:
+    classes: [hard_grip, hard_slip, soft, rough, "edge:planks"]
+    hours_per_source: {default: 0.3}
+    sources: [rig]
+    splits: [0.7, 0.1, 0.2]

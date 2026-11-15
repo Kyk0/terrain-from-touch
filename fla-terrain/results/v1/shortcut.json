@@ -1,0 +1,17 @@
+{
+ "lines": [
+  "per-gait walk test, P (mean of seeds): walk_g113 F1 0.853 grip/slip 0.980; walk_g80 F1 0.834 grip/slip 0.981; walk_sonic F1 0.718 grip/slip 0.892",
+  "per-gait walk test, P+N (mean of seeds): walk_g113 F1 0.888 grip/slip 0.985; walk_g80 F1 0.879 grip/slip 0.991; walk_sonic F1 0.815 grip/slip 0.953",
+  "per-gait walk test, P+N+S (mean of seeds): walk_g113 F1 0.886 grip/slip 0.981; walk_g80 F1 0.874 grip/slip 0.982; walk_sonic F1 0.816 grip/slip 0.954",
+  "no cmd_vel channels, P+N seed 0: walk F1 0.857 (with cmd 0.856), grip/slip F1 0.958 (with 0.973), mu MAE 0.155 (with 0.175)",
+  "no cmd_vel channels, P+N+S seed 0: walk F1 0.861 (with cmd 0.858), grip/slip F1 0.973 (with 0.962), mu MAE 0.166 (with 0.151)",
+  "leave-walk_sonic-out, P+N seed 0, tested on walk_sonic walk test (26274 windows): F1 0.069 (seen gait 0.804), grip/slip F1 0.008 (seen 0.951)",
+  "leave-walk_sonic-out, P+N+S seed 0, tested on walk_sonic walk test (26274 windows): F1 0.055 (seen gait 0.809), grip/slip F1 0.001 (seen 0.927)",
+  "leave-walk_g80-out, P+N seed 0, tested on walk_g80 walk test (24776 windows): F1 0.537 (seen gait 0.877), grip/slip F1 0.456 (seen 0.992)",
+  "leave-walk_g80-out, P+N+S seed 0, tested on walk_g80 walk test (24776 windows): F1 0.604 (seen gait 0.873), grip/slip F1 0.500 (seen 0.980)",
+  "episode identity: splits are by split_key (one per episode = terrain instance) with disjoint friction/stiffness bands; no episode or parameter value is shared (leakage test PASS)"
+ ],
+ "git_commit": "b19d1ef577c7d0ff4f1bfc94d5d7311bbe6e7aad",
+ "git_dirty": false,
+ "command": "scripts/shortcut_tests.py --data /path/to/fla-terrain/data/v1 --out results/v1"
+}

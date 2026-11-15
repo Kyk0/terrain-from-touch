@@ -1,0 +1,17 @@
+# FLA-0 v2 sensitivity sets (question 7, D14): walking, FIXED nominal sole for train/val; the test episodes are
+# recorded through four sensor settings: nominal (out/nominal), shifted and foot-outline mask (extra readouts of the
+# same simulation: identical dynamics), and the pad sole (same seed and commands, simulated again: out/pads).
+# 0.45 h per class per source x 6 classes x 3 sources = 8.1 h: train 5.7 h, val 0.8 h, test 1.6 h per setting.
+seconds: 20
+seed: 3101
+sole: v2
+sole_setting: nominal
+groups:
+  sens:
+    classes: [hard_grip, hard_slip, soft, rough, slope, "edge:planks", "edge:steps"]
+    hours_per_source: {default: 0.45, "edge:planks": 0.225, "edge:steps": 0.225}
+    sources: [walk_g113, walk_g80, walk_sonic]
+    splits: [0.7, 0.1, 0.2]
+    out_subdir: nominal
+    readouts: [shifted, g1]
+    pads_twin: true

@@ -1,0 +1,135 @@
+{
+ "selection": {
+  "walk_g113": {
+   "episode": "course_walk_g113_seed001",
+   "seed": 1,
+   "crossed_of_40": 19
+  },
+  "walk_g80": {
+   "episode": "course_walk_g80_seed000",
+   "seed": 0,
+   "crossed_of_40": 22
+  },
+  "walk_sonic": {
+   "episode": "course_walk_sonic_seed005",
+   "seed": 5,
+   "crossed_of_40": 6
+  }
+ },
+ "clips": [
+  {
+   "file": "course_g113_seed001.mp4",
+   "frames": 2184,
+   "seconds": 72.8,
+   "truth_matches_episode_labels": true,
+   "sat_normal_N": 60.0,
+   "caption": "G113 on course seed 1: recorded test run, no fall, every chunk crossed / G113 crossed every chunk in 19 of 40 courses (19 of 40 without a fall)",
+   "duration_s": 72.8,
+   "stills": [
+    "course_g113_seed001_0.png",
+    "course_g113_seed001_1.png",
+    "course_g113_seed001_2.png"
+   ]
+  },
+  {
+   "file": "course_g80_seed000.mp4",
+   "frames": 2211,
+   "seconds": 73.7,
+   "truth_matches_episode_labels": true,
+   "sat_normal_N": 60.0,
+   "caption": "G80 on course seed 0: recorded test run, no fall, every chunk crossed / G80 crossed every chunk in 22 of 40 courses (22 of 40 without a fall)",
+   "duration_s": 73.7,
+   "stills": [
+    "course_g80_seed000_0.png",
+    "course_g80_seed000_1.png",
+    "course_g80_seed000_2.png"
+   ]
+  },
+  {
+   "file": "course_sonic_seed005.mp4",
+   "frames": 2349,
+   "seconds": 78.3,
+   "truth_matches_episode_labels": true,
+   "sat_normal_N": 60.0,
+   "caption": "SONIC on course seed 5: recorded test run, no fall, every chunk crossed / SONIC crossed every chunk in 6 of 40 courses (12 of 40 without a fall)",
+   "duration_s": 78.3,
+   "stills": [
+    "course_sonic_seed005_0.png",
+    "course_sonic_seed005_1.png",
+    "course_sonic_seed005_2.png"
+   ]
+  },
+  {
+   "file": "closeup_hard_grip.mp4",
+   "duration_s": 8.0,
+   "stills": [
+    "closeup_hard_grip_0.png",
+    "closeup_hard_grip_1.png",
+    "closeup_hard_grip_2.png"
+   ]
+  },
+  {
+   "file": "closeup_hard_slip.mp4",
+   "duration_s": 8.0,
+   "stills": [
+    "closeup_hard_slip_0.png",
+    "closeup_hard_slip_1.png",
+    "closeup_hard_slip_2.png"
+   ]
+  },
+  {
+   "file": "closeup_slope.mp4",
+   "duration_s": 8.0,
+   "stills": [
+    "closeup_slope_0.png",
+    "closeup_slope_1.png",
+    "closeup_slope_2.png"
+   ]
+  },
+  {
+   "file": "rig_press.mp4",
+   "duration_s": 8.0,
+   "stills": [
+    "rig_press_0.png",
+    "rig_press_1.png",
+    "rig_press_2.png"
+   ]
+  },
+  {
+   "file": "rig_drag03.mp4",
+   "duration_s": 8.0,
+   "stills": [
+    "rig_drag03_0.png",
+    "rig_drag03_1.png",
+    "rig_drag03_2.png"
+   ]
+  },
+  {
+   "file": "rig_drag09.mp4",
+   "duration_s": 8.0,
+   "stills": [
+    "rig_drag09_0.png",
+    "rig_drag09_1.png",
+    "rig_drag09_2.png"
+   ]
+  },
+  {
+   "file": "rig_twist.mp4",
+   "duration_s": 8.0,
+   "stills": [
+    "rig_twist_0.png",
+    "rig_twist_1.png",
+    "rig_twist_2.png"
+   ]
+  },
+  {
+   "file": "rig_edge.mp4",
+   "duration_s": 8.0,
+   "stills": [
+    "rig_edge_0.png",
+    "rig_edge_1.png",
+    "rig_edge_2.png"
+   ]
+  }
+ ]
+}

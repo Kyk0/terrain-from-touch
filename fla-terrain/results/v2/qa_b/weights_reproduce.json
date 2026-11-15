@@ -1,0 +1,20 @@
+[
+ {
+  "model": "P+Nreal+Sblk_s0",
+  "n": 139410,
+  "terrain_agree": 1.0,
+  "sup_L_agree": 1.0,
+  "sup_R_agree": 1.0,
+  "mu_max_abs_diff": 0.0,
+  "prob_max_abs_diff": 0.0
+ },
+ {
+  "model": "P+Nblk+Sblk_s0",
+  "n": 139410,
+  "terrain_agree": 1.0,
+  "sup_L_agree": 1.0,
+  "sup_R_agree": 1.0,
+  "mu_max_abs_diff": 0.0,
+  "prob_max_abs_diff": 0.0
+ }
+]

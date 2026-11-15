@@ -1,0 +1,903 @@
+{
+ "git_commit": "b19d1ef577c7d0ff4f1bfc94d5d7311bbe6e7aad",
+ "git_dirty": false,
+ "command": "scripts/analyze_friction.py --data /path/to/fla-terrain/data/v1 --out results/v1",
+ "train_class_mean_mu": {
+  "0": 0.9001124501228333,
+  "1": 0.259080708026886,
+  "2": 0.8991369009017944,
+  "3": 0.898513674736023,
+  "4": 0.9069487452507019,
+  "5": 0.891560435295105
+ },
+ "sets": {
+  "P": [
+   {
+    "all": {
+     "mae": 0.17984548211097717,
+     "n": 74932,
+     "ref_pred_class_mean": 0.20735577067057712,
+     "ref_true_class_mean": 0.19603855572505668
+    },
+    "class:hard_grip": {
+     "mae": 0.20599688589572906,
+     "n": 17780,
+     "ref_pred_class_mean": 0.22089094802217624,
+     "ref_true_class_mean": 0.21014216194941304
+    },
+    "class:hard_slip": {
+     "mae": 0.10620396584272385,
+     "n": 10751,
+     "ref_pred_class_mean": 0.12499762742563843,
+     "ref_true_class_mean": 0.08747041126956231
+    },
+    "class:soft": {
+     "mae": 0.11228129267692566,
+     "n": 13332,
+     "ref_pred_class_mean": 0.219884331152849,
+     "ref_true_class_mean": 0.21945069746823773
+    },
+    "class:rough": {
+     "mae": 0.20709583163261414,
+     "n": 13408,
+     "ref_pred_class_mean": 0.20920995501512418,
+     "ref_true_class_mean": 0.1988707884861632
+    },
+    "class:slope": {
+     "mae": 0.22091752290725708,
+     "n": 10262,
+     "ref_pred_class_mean": 0.22598115618617834,
+     "ref_true_class_mean": 0.2241596391188938
+    },
+    "class:edge": {
+     "mae": 0.226729154586792,
+     "n": 9399,
+     "ref_pred_class_mean": 0.23520464464785862,
+     "ref_true_class_mean": 0.22559172031739658
+    },
+    "hard_slip:test_out 0.08-0.12": {
+     "mae": 0.13089139759540558,
+     "n": 4780,
+     "ref_pred_class_mean": 0.19472468974045382,
+     "ref_true_class_mean": 0.15805474253971458
+    },
+    "hard_slip:test_in 0.285-0.295": {
+     "mae": 0.0864407867193222,
+     "n": 5971,
+     "ref_pred_class_mean": 0.06917860919337959,
+     "ref_true_class_mean": 0.03096511844234278
+    },
+    "source:walk_g113": {
+     "mae": 0.17839954793453217,
+     "n": 25077,
+     "ref_pred_class_mean": 0.20641598522897237,
+     "ref_true_class_mean": 0.2027315719251989
+    },
+    "source:walk_g80": {
+     "mae": 0.14697383344173431,
+     "n": 23708,
+     "ref_pred_class_mean": 0.19888219896277187,
+     "ref_true_class_mean": 0.19703268637006713
+    },
+    "source:walk_sonic": {
+     "mae": 0.21103763580322266,
+     "n": 26147,
+     "ref_pred_class_mean": 0.21594025216244117,
+     "ref_true_class_mean": 0.18871803648449856
+    },
+    "saturated": {
+     "mae": 0.12919080257415771,
+     "n": 21467,
+     "ref_pred_class_mean": 0.1525436406841891,
+     "ref_true_class_mean": 0.1345272680618108
+    },
+    "not saturated": {
+     "mae": 0.20018409192562103,
+     "n": 53465,
+     "ref_pred_class_mean": 0.22936366358028987,
+     "ref_true_class_mean": 0.22073626099517546
+    },
+    "hard_slip saturated": {
+     "mae": 0.09244386106729507,
+     "n": 10010,
+     "ref_pred_class_mean": 0.11633391335279077,
+     "ref_true_class_mean": 0.0885836615272752
+    },
+    "hard_slip not saturated": {
+     "mae": 0.29208609461784363,
+     "n": 741,
+     "ref_pred_class_mean": 0.24203376490094883,
+     "ref_true_class_mean": 0.07243176743730038
+    }
+   },
+   {
+    "all": {
+     "mae": 0.18117442727088928,
+     "n": 74932,
+     "ref_pred_class_mean": 0.20621595694282038,
+     "ref_true_class_mean": 0.19603855572505668
+    },
+    "class:hard_grip": {
+     "mae": 0.2020912915468216,
+     "n": 17780,
+     "ref_pred_class_mean": 0.2171144746453475,
+     "ref_true_class_mean": 0.21014216194941304
+    },
+    "class:hard_slip": {
+     "mae": 0.1134878545999527,
+     "n": 10751,
+     "ref_pred_class_mean": 0.13279007093669226,
+     "ref_true_class_mean": 0.08747041126956231
+    },
+    "class:soft": {
+     "mae": 0.12686322629451752,
+     "n": 13332,
+     "ref_pred_class_mean": 0.21986695949268742,
+     "ref_true_class_mean": 0.21945069746823773
+    },
+    "class:rough": {
+     "mae": 0.20301131904125214,
+     "n": 13408,
+     "ref_pred_class_mean": 0.20544736097102234,
+     "ref_true_class_mean": 0.1988707884861632
+    },
+    "class:slope": {
+     "mae": 0.21196338534355164,
+     "n": 10262,
+     "ref_pred_class_mean": 0.22483639986838916,
+     "ref_true_class_mean": 0.2241596391188938
+    },
+    "class:edge": {
+     "mae": 0.2312997430562973,
+     "n": 9399,
+     "ref_pred_class_mean": 0.2309902136928795,
+     "ref_true_class_mean": 0.22559172031739658
+    },
+    "hard_slip:test_out 0.08-0.12": {
+     "mae": 0.1376301497220993,
+     "n": 4780,
+     "ref_pred_class_mean": 0.19945134005380724,
+     "ref_true_class_mean": 0.15805474253971458
+    },
+    "hard_slip:test_in 0.285-0.295": {
+     "mae": 0.09416108578443527,
+     "n": 5971,
+     "ref_pred_class_mean": 0.07942533029361579,
+     "ref_true_class_mean": 0.03096511844234278
+    },
+    "source:walk_g113": {
+     "mae": 0.1902773082256317,
+     "n": 25077,
+     "ref_pred_class_mean": 0.20570562587882427,
+     "ref_true_class_mean": 0.2027315719251989
+    },
+    "source:walk_g80": {
+     "mae": 0.14942841231822968,
+     "n": 23708,
+     "ref_pred_class_mean": 0.199339327936191,
+     "ref_true_class_mean": 0.19703268637006713
+    },
+    "source:walk_sonic": {
+     "mae": 0.2012287974357605,
+     "n": 26147,
+     "ref_pred_class_mean": 0.21294057898668778,
+     "ref_true_class_mean": 0.18871803648449856
+    },
+    "saturated": {
+     "mae": 0.13151176273822784,
+     "n": 21467,
+     "ref_pred_class_mean": 0.1546565082173918,
+     "ref_true_class_mean": 0.1345272680618108
+    },
+    "not saturated": {
+     "mae": 0.2011147290468216,
+     "n": 53465,
+     "ref_pred_class_mean": 0.22691784950409927,
+     "ref_true_class_mean": 0.22073626099517546
+    },
+    "hard_slip saturated": {
+     "mae": 0.09837358444929123,
+     "n": 10010,
+     "ref_pred_class_mean": 0.12154591005745825,
+     "ref_true_class_mean": 0.0885836615272752
+    },
+    "hard_slip not saturated": {
+     "mae": 0.31766316294670105,
+     "n": 741,
+     "ref_pred_class_mean": 0.28468487579652013,
+     "ref_true_class_mean": 0.07243176743730038
+    }
+   },
+   {
+    "all": {
+     "mae": 0.19834992289543152,
+     "n": 74932,
+     "ref_pred_class_mean": 0.20750722065991548,
+     "ref_true_class_mean": 0.19603855572505668
+    },
+    "class:hard_grip": {
+     "mae": 0.22040216624736786,
+     "n": 17780,
+     "ref_pred_class_mean": 0.22153215387205438,
+     "ref_true_class_mean": 0.21014216194941304
+    },
+    "class:hard_slip": {
+     "mae": 0.09878699481487274,
+     "n": 10751,
+     "ref_pred_class_mean": 0.124571328896604,
+     "ref_true_class_mean": 0.08747041126956231
+    },
+    "class:soft": {
+     "mae": 0.14204441010951996,
+     "n": 13332,
+     "ref_pred_class_mean": 0.2202146573625382,
+     "ref_true_class_mean": 0.21945069746823773
+    },
+    "class:rough": {
+     "mae": 0.2269768863916397,
+     "n": 13408,
+     "ref_pred_class_mean": 0.20944716978311395,
+     "ref_true_class_mean": 0.1988707884861632
+    },
+    "class:slope": {
+     "mae": 0.2435774803161621,
+     "n": 10262,
+     "ref_pred_class_mean": 0.22548691623742018,
+     "ref_true_class_mean": 0.2241596391188938
+    },
+    "class:edge": {
+     "mae": 0.26016736030578613,
+     "n": 9399,
+     "ref_pred_class_mean": 0.23541938576854052,
+     "ref_true_class_mean": 0.22559172031739658
+    },
+    "hard_slip:test_out 0.08-0.12": {
+     "mae": 0.0967148020863533,
+     "n": 4780,
+     "ref_pred_class_mean": 0.18797701426224478,
+     "ref_true_class_mean": 0.15805474253971458
+    },
+    "hard_slip:test_in 0.285-0.295": {
+     "mae": 0.10044585913419724,
+     "n": 5971,
+     "ref_pred_class_mean": 0.07381279999897161,
+     "ref_true_class_mean": 0.03096511844234278
+    },
+    "source:walk_g113": {
+     "mae": 0.2015884816646576,
+     "n": 25077,
+     "ref_pred_class_mean": 0.20681671747394018,
+     "ref_true_class_mean": 0.2027315719251989
+    },
+    "source:walk_g80": {
+     "mae": 0.17951755225658417,
+     "n": 23708,
+     "ref_pred_class_mean": 0.19991369888636482,
+     "ref_true_class_mean": 0.19703268637006713
+    },
+    "source:walk_sonic": {
+     "mae": 0.21231961250305176,
+     "n": 26147,
+     "ref_pred_class_mean": 0.2150546625309539,
+     "ref_true_class_mean": 0.18871803648449856
+    },
+    "saturated": {
+     "mae": 0.13994549214839935,
+     "n": 21467,
+     "ref_pred_class_mean": 0.15359803479161888,
+     "ref_true_class_mean": 0.1345272680618108
+    },
+    "not saturated": {
+     "mae": 0.22180017828941345,
+     "n": 53465,
+     "ref_pred_class_mean": 0.22915256795318625,
+     "ref_true_class_mean": 0.22073626099517546
+    },
+    "hard_slip saturated": {
+     "mae": 0.08559665828943253,
+     "n": 10010,
+     "ref_pred_class_mean": 0.11569230507288898,
+     "ref_true_class_mean": 0.0885836615272752
+    },
+    "hard_slip not saturated": {
+     "mae": 0.276972234249115,
+     "n": 741,
+     "ref_pred_class_mean": 0.24451603669064892,
+     "ref_true_class_mean": 0.07243176743730038
+    }
+   }
+  ],
+  "P+N": [
+   {
+    "all": {
+     "mae": 0.17464987933635712,
+     "n": 74932,
+     "ref_pred_class_mean": 0.2016254095574911,
+     "ref_true_class_mean": 0.19603855572505668
+    },
+    "class:hard_grip": {
+     "mae": 0.1944083720445633,
+     "n": 17780,
+     "ref_pred_class_mean": 0.2182315029765409,
+     "ref_true_class_mean": 0.21014216194941304
+    },
+    "class:hard_slip": {
+     "mae": 0.07454384863376617,
+     "n": 10751,
+     "ref_pred_class_mean": 0.10259444127123518,
+     "ref_true_class_mean": 0.08747041126956231
+    },
+    "class:soft": {
+     "mae": 0.11783696711063385,
+     "n": 13332,
+     "ref_pred_class_mean": 0.2194686138724694,
+     "ref_true_class_mean": 0.21945069746823773
+    },
+    "class:rough": {
+     "mae": 0.21090836822986603,
+     "n": 13408,
+     "ref_pred_class_mean": 0.20362278139818824,
+     "ref_true_class_mean": 0.1988707884861632
+    },
+    "class:slope": {
+     "mae": 0.21560268104076385,
+     "n": 10262,
+     "ref_pred_class_mean": 0.22509918807543083,
+     "ref_true_class_mean": 0.2241596391188938
+    },
+    "class:edge": {
+     "mae": 0.23592789471149445,
+     "n": 9399,
+     "ref_pred_class_mean": 0.229699813466032,
+     "ref_true_class_mean": 0.22559172031739658
+    },
+    "hard_slip:test_out 0.08-0.12": {
+     "mae": 0.06616366654634476,
+     "n": 4780,
+     "ref_pred_class_mean": 0.16628886959885703,
+     "ref_true_class_mean": 0.15805474253971458
+    },
+    "hard_slip:test_in 0.285-0.295": {
+     "mae": 0.08125248551368713,
+     "n": 5971,
+     "ref_pred_class_mean": 0.051604763259841376,
+     "ref_true_class_mean": 0.03096511844234278
+    },
+    "source:walk_g113": {
+     "mae": 0.17340661585330963,
+     "n": 25077,
+     "ref_pred_class_mean": 0.20437468790534286,
+     "ref_true_class_mean": 0.2027315719251989
+    },
+    "source:walk_g80": {
+     "mae": 0.16103804111480713,
+     "n": 23708,
+     "ref_pred_class_mean": 0.19906586558959205,
+     "ref_true_class_mean": 0.19703268637006713
+    },
+    "source:walk_sonic": {
+     "mae": 0.18818439543247223,
+     "n": 26147,
+     "ref_pred_class_mean": 0.2013094274280641,
+     "ref_true_class_mean": 0.18871803648449856
+    },
+    "saturated": {
+     "mae": 0.12269441038370132,
+     "n": 21467,
+     "ref_pred_class_mean": 0.14399918771090803,
+     "ref_true_class_mean": 0.1345272680618108
+    },
+    "not saturated": {
+     "mae": 0.19551077485084534,
+     "n": 53465,
+     "ref_pred_class_mean": 0.22476320258808305,
+     "ref_true_class_mean": 0.22073626099517546
+    },
+    "hard_slip saturated": {
+     "mae": 0.06852777302265167,
+     "n": 10010,
+     "ref_pred_class_mean": 0.09971823205466156,
+     "ref_true_class_mean": 0.0885836615272752
+    },
+    "hard_slip not saturated": {
+     "mae": 0.15581360459327698,
+     "n": 741,
+     "ref_pred_class_mean": 0.14144849560038764,
+     "ref_true_class_mean": 0.07243176743730038
+    }
+   },
+   {
+    "all": {
+     "mae": 0.16393296420574188,
+     "n": 74932,
+     "ref_pred_class_mean": 0.20049917748606477,
+     "ref_true_class_mean": 0.19603855572505668
+    },
+    "class:hard_grip": {
+     "mae": 0.17734020948410034,
+     "n": 17780,
+     "ref_pred_class_mean": 0.2145400116997441,
+     "ref_true_class_mean": 0.21014216194941304
+    },
+    "class:hard_slip": {
+     "mae": 0.08147615939378738,
+     "n": 10751,
+     "ref_pred_class_mean": 0.10775899212021194,
+     "ref_true_class_mean": 0.08747041126956231
+    },
+    "class:soft": {
+     "mae": 0.11521781980991364,
+     "n": 13332,
+     "ref_pred_class_mean": 0.21945614277636938,
+     "ref_true_class_mean": 0.21945069746823773
+    },
+    "class:rough": {
+     "mae": 0.19693872332572937,
+     "n": 13408,
+     "ref_pred_class_mean": 0.20114416855349604,
+     "ref_true_class_mean": 0.1988707884861632
+    },
+    "class:slope": {
+     "mae": 0.193252295255661,
+     "n": 10262,
+     "ref_pred_class_mean": 0.22444979745122895,
+     "ref_true_class_mean": 0.2241596391188938
+    },
+    "class:edge": {
+     "mae": 0.2228931486606598,
+     "n": 9399,
+     "ref_pred_class_mean": 0.22605935803549457,
+     "ref_true_class_mean": 0.22559172031739658
+    },
+    "hard_slip:test_out 0.08-0.12": {
+     "mae": 0.09075967967510223,
+     "n": 4780,
+     "ref_pred_class_mean": 0.17003023623017338,
+     "ref_true_class_mean": 0.15805474253971458
+    },
+    "hard_slip:test_in 0.285-0.295": {
+     "mae": 0.0740443617105484,
+     "n": 5971,
+     "ref_pred_class_mean": 0.057908624200999806,
+     "ref_true_class_mean": 0.03096511844234278
+    },
+    "source:walk_g113": {
+     "mae": 0.16450971364974976,
+     "n": 25077,
+     "ref_pred_class_mean": 0.20438529570430367,
+     "ref_true_class_mean": 0.2027315719251989
+    },
+    "source:walk_g80": {
+     "mae": 0.14657612144947052,
+     "n": 23708,
+     "ref_pred_class_mean": 0.19903952613415113,
+     "ref_true_class_mean": 0.19703268637006713
+    },
+    "source:walk_sonic": {
+     "mae": 0.17911763489246368,
+     "n": 26147,
+     "ref_pred_class_mean": 0.19809558348646217,
+     "ref_true_class_mean": 0.18871803648449856
+    },
+    "saturated": {
+     "mae": 0.11723238974809647,
+     "n": 21467,
+     "ref_pred_class_mean": 0.14442553067503597,
+     "ref_true_class_mean": 0.1345272680618108
+    },
+    "not saturated": {
+     "mae": 0.18268394470214844,
+     "n": 53465,
+     "ref_pred_class_mean": 0.22301358833601062,
+     "ref_true_class_mean": 0.22073626099517546
+    },
+    "hard_slip saturated": {
+     "mae": 0.07523959130048752,
+     "n": 10010,
+     "ref_pred_class_mean": 0.10450980796308428,
+     "ref_true_class_mean": 0.0885836615272752
+    },
+    "hard_slip not saturated": {
+     "mae": 0.16572453081607819,
+     "n": 741,
+     "ref_pred_class_mean": 0.15165147985684888,
+     "ref_true_class_mean": 0.07243176743730038
+    }
+   },
+   {
+    "all": {
+     "mae": 0.160542294383049,
+     "n": 74932,
+     "ref_pred_class_mean": 0.2001527398000407,
+     "ref_true_class_mean": 0.19603855572505668
+    },
+    "class:hard_grip": {
+     "mae": 0.16673552989959717,
+     "n": 17780,
+     "ref_pred_class_mean": 0.214141188117731,
+     "ref_true_class_mean": 0.21014216194941304
+    },
+    "class:hard_slip": {
+     "mae": 0.07324486970901489,
+     "n": 10751,
+     "ref_pred_class_mean": 0.10623038430697263,
+     "ref_true_class_mean": 0.08747041126956231
+    },
+    "class:soft": {
+     "mae": 0.12342961877584457,
+     "n": 13332,
+     "ref_pred_class_mean": 0.219463953278353,
+     "ref_true_class_mean": 0.21945069746823773
+    },
+    "class:rough": {
+     "mae": 0.18672432005405426,
+     "n": 13408,
+     "ref_pred_class_mean": 0.20040419723100622,
+     "ref_true_class_mean": 0.1988707884861632
+    },
+    "class:slope": {
+     "mae": 0.20495274662971497,
+     "n": 10262,
+     "ref_pred_class_mean": 0.2254520294216032,
+     "ref_true_class_mean": 0.2241596391188938
+    },
+    "class:edge": {
+     "mae": 0.21548603475093842,
+     "n": 9399,
+     "ref_pred_class_mean": 0.22575064206557116,
+     "ref_true_class_mean": 0.22559172031739658
+    },
+    "hard_slip:test_out 0.08-0.12": {
+     "mae": 0.07486126571893692,
+     "n": 4780,
+     "ref_pred_class_mean": 0.17001257354089655,
+     "ref_true_class_mean": 0.15805474253971458
+    },
+    "hard_slip:test_in 0.285-0.295": {
+     "mae": 0.07195087522268295,
+     "n": 5971,
+     "ref_pred_class_mean": 0.05517045053739361,
+     "ref_true_class_mean": 0.03096511844234278
+    },
+    "source:walk_g113": {
+     "mae": 0.16631299257278442,
+     "n": 25077,
+     "ref_pred_class_mean": 0.20424365764351968,
+     "ref_true_class_mean": 0.2027315719251989
+    },
+    "source:walk_g80": {
+     "mae": 0.14835141599178314,
+     "n": 23708,
+     "ref_pred_class_mean": 0.19903292031639722,
+     "ref_true_class_mean": 0.19703268637006713
+    },
+    "source:walk_sonic": {
+     "mae": 0.16606144607067108,
+     "n": 26147,
+     "ref_pred_class_mean": 0.19724459483340195,
+     "ref_true_class_mean": 0.18871803648449856
+    },
+    "saturated": {
+     "mae": 0.11372984200716019,
+     "n": 21467,
+     "ref_pred_class_mean": 0.1440661203923293,
+     "ref_true_class_mean": 0.1345272680618108
+    },
+    "not saturated": {
+     "mae": 0.17933818697929382,
+     "n": 53465,
+     "ref_pred_class_mean": 0.22267235934227095,
+     "ref_true_class_mean": 0.22073626099517546
+    },
+    "hard_slip saturated": {
+     "mae": 0.06942954659461975,
+     "n": 10010,
+     "ref_pred_class_mean": 0.10415122335354289,
+     "ref_true_class_mean": 0.0885836615272752
+    },
+    "hard_slip not saturated": {
+     "mae": 0.12478514015674591,
+     "n": 741,
+     "ref_pred_class_mean": 0.13431729543225163,
+     "ref_true_class_mean": 0.07243176743730038
+    }
+   }
+  ],
+  "P+N+S": [
+   {
+    "all": {
+     "mae": 0.1509457230567932,
+     "n": 74932,
+     "ref_pred_class_mean": 0.1987401074661501,
+     "ref_true_class_mean": 0.19603855572505668
+    },
+    "class:hard_grip": {
+     "mae": 0.15164446830749512,
+     "n": 17780,
+     "ref_pred_class_mean": 0.21375116300596295,
+     "ref_true_class_mean": 0.21014216194941304
+    },
+    "class:hard_slip": {
+     "mae": 0.06426070630550385,
+     "n": 10751,
+     "ref_pred_class_mean": 0.09809951976588932,
+     "ref_true_class_mean": 0.08747041126956231
+    },
+    "class:soft": {
+     "mae": 0.11774137616157532,
+     "n": 13332,
+     "ref_pred_class_mean": 0.21946564682907718,
+     "ref_true_class_mean": 0.21945069746823773
+    },
+    "class:rough": {
+     "mae": 0.18421462178230286,
+     "n": 13408,
+     "ref_pred_class_mean": 0.20029601891278367,
+     "ref_true_class_mean": 0.1988707884861632
+    },
+    "class:slope": {
+     "mae": 0.19731763005256653,
+     "n": 10262,
+     "ref_pred_class_mean": 0.22454608289430164,
+     "ref_true_class_mean": 0.2241596391188938
+    },
+    "class:edge": {
+     "mae": 0.19778791069984436,
+     "n": 9399,
+     "ref_pred_class_mean": 0.22566796357434588,
+     "ref_true_class_mean": 0.22559172031739658
+    },
+    "hard_slip:test_out 0.08-0.12": {
+     "mae": 0.07790443301200867,
+     "n": 4780,
+     "ref_pred_class_mean": 0.16604369639196906,
+     "ref_true_class_mean": 0.15805474253971458
+    },
+    "hard_slip:test_in 0.285-0.295": {
+     "mae": 0.05333840847015381,
+     "n": 5971,
+     "ref_pred_class_mean": 0.04370776557519076,
+     "ref_true_class_mean": 0.03096511844234278
+    },
+    "source:walk_g113": {
+     "mae": 0.15506689250469208,
+     "n": 25077,
+     "ref_pred_class_mean": 0.2040804941509478,
+     "ref_true_class_mean": 0.2027315719251989
+    },
+    "source:walk_g80": {
+     "mae": 0.13586030900478363,
+     "n": 23708,
+     "ref_pred_class_mean": 0.19882508809658614,
+     "ref_true_class_mean": 0.19703268637006713
+    },
+    "source:walk_sonic": {
+     "mae": 0.16067145764827728,
+     "n": 26147,
+     "ref_pred_class_mean": 0.1935412090196342,
+     "ref_true_class_mean": 0.18871803648449856
+    },
+    "saturated": {
+     "mae": 0.10564393550157547,
+     "n": 21467,
+     "ref_pred_class_mean": 0.1400419234095957,
+     "ref_true_class_mean": 0.1345272680618108
+    },
+    "not saturated": {
+     "mae": 0.16913507878780365,
+     "n": 53465,
+     "ref_pred_class_mean": 0.2223083094140048,
+     "ref_true_class_mean": 0.22073626099517546
+    },
+    "hard_slip saturated": {
+     "mae": 0.05800199508666992,
+     "n": 10010,
+     "ref_pred_class_mean": 0.09610364417081231,
+     "ref_true_class_mean": 0.0885836615272752
+    },
+    "hard_slip not saturated": {
+     "mae": 0.14880822598934174,
+     "n": 741,
+     "ref_pred_class_mean": 0.12506134798008742,
+     "ref_true_class_mean": 0.07243176743730038
+    }
+   },
+   {
+    "all": {
+     "mae": 0.14575377106666565,
+     "n": 74932,
+     "ref_pred_class_mean": 0.19854478087284771,
+     "ref_true_class_mean": 0.19603855572505668
+    },
+    "class:hard_grip": {
+     "mae": 0.15524011850357056,
+     "n": 17780,
+     "ref_pred_class_mean": 0.21460079839715002,
+     "ref_true_class_mean": 0.21014216194941304
+    },
+    "class:hard_slip": {
+     "mae": 0.05241761356592178,
+     "n": 10751,
+     "ref_pred_class_mean": 0.095693948126601,
+     "ref_true_class_mean": 0.08747041126956231
+    },
+    "class:soft": {
+     "mae": 0.12174180895090103,
+     "n": 13332,
+     "ref_pred_class_mean": 0.21951754806083207,
+     "ref_true_class_mean": 0.21945069746823773
+    },
+    "class:rough": {
+     "mae": 0.17870984971523285,
+     "n": 13408,
+     "ref_pred_class_mean": 0.20051076120934794,
+     "ref_true_class_mean": 0.1988707884861632
+    },
+    "class:slope": {
+     "mae": 0.18052977323532104,
+     "n": 10262,
+     "ref_pred_class_mean": 0.2246024767236388,
+     "ref_true_class_mean": 0.2241596391188938
+    },
+    "class:edge": {
+     "mae": 0.18364840745925903,
+     "n": 9399,
+     "ref_pred_class_mean": 0.22481357967591004,
+     "ref_true_class_mean": 0.22559172031739658
+    },
+    "hard_slip:test_out 0.08-0.12": {
+     "mae": 0.05159541592001915,
+     "n": 4780,
+     "ref_pred_class_mean": 0.16523358880320105,
+     "ref_true_class_mean": 0.15805474253971458
+    },
+    "hard_slip:test_in 0.285-0.295": {
+     "mae": 0.05307580158114433,
+     "n": 5971,
+     "ref_pred_class_mean": 0.04002496764859928,
+     "ref_true_class_mean": 0.03096511844234278
+    },
+    "source:walk_g113": {
+     "mae": 0.14240196347236633,
+     "n": 25077,
+     "ref_pred_class_mean": 0.20392302195477124,
+     "ref_true_class_mean": 0.2027315719251989
+    },
+    "source:walk_g80": {
+     "mae": 0.13681887090206146,
+     "n": 23708,
+     "ref_pred_class_mean": 0.19838228460978916,
+     "ref_true_class_mean": 0.19703268637006713
+    },
+    "source:walk_sonic": {
+     "mae": 0.15706990659236908,
+     "n": 26147,
+     "ref_pred_class_mean": 0.19353396929955807,
+     "ref_true_class_mean": 0.18871803648449856
+    },
+    "saturated": {
+     "mae": 0.09869569540023804,
+     "n": 21467,
+     "ref_pred_class_mean": 0.14000064090832082,
+     "ref_true_class_mean": 0.1345272680618108
+    },
+    "not saturated": {
+     "mae": 0.16464830935001373,
+     "n": 53465,
+     "ref_pred_class_mean": 0.2220511318055794,
+     "ref_true_class_mean": 0.22073626099517546
+    },
+    "hard_slip saturated": {
+     "mae": 0.04931157827377319,
+     "n": 10010,
+     "ref_pred_class_mean": 0.09560902839401862,
+     "ref_true_class_mean": 0.0885836615272752
+    },
+    "hard_slip not saturated": {
+     "mae": 0.09437630325555801,
+     "n": 741,
+     "ref_pred_class_mean": 0.09684110942639802,
+     "ref_true_class_mean": 0.07243176743730038
+    }
+   },
+   {
+    "all": {
+     "mae": 0.15250767767429352,
+     "n": 74932,
+     "ref_pred_class_mean": 0.2002734507938236,
+     "ref_true_class_mean": 0.19603855572505668
+    },
+    "class:hard_grip": {
+     "mae": 0.16124019026756287,
+     "n": 17780,
+     "ref_pred_class_mean": 0.21789138425388807,
+     "ref_true_class_mean": 0.21014216194941304
+    },
+    "class:hard_slip": {
+     "mae": 0.0702810287475586,
+     "n": 10751,
+     "ref_pred_class_mean": 0.09627413653435346,
+     "ref_true_class_mean": 0.08747041126956231
+    },
+    "class:soft": {
+     "mae": 0.1319412887096405,
+     "n": 13332,
+     "ref_pred_class_mean": 0.21953080564585312,
+     "ref_true_class_mean": 0.21945069746823773
+    },
+    "class:rough": {
+     "mae": 0.17538343369960785,
+     "n": 13408,
+     "ref_pred_class_mean": 0.2025439499528425,
+     "ref_true_class_mean": 0.1988707884861632
+    },
+    "class:slope": {
+     "mae": 0.18359559774398804,
+     "n": 10262,
+     "ref_pred_class_mean": 0.22548590092555842,
+     "ref_true_class_mean": 0.2241596391188938
+    },
+    "class:edge": {
+     "mae": 0.19263991713523865,
+     "n": 9399,
+     "ref_pred_class_mean": 0.2278229454018002,
+     "ref_true_class_mean": 0.22559172031739658
+    },
+    "hard_slip:test_out 0.08-0.12": {
+     "mae": 0.09555908292531967,
+     "n": 4780,
+     "ref_pred_class_mean": 0.16495896052709433,
+     "ref_true_class_mean": 0.15805474253971458
+    },
+    "hard_slip:test_in 0.285-0.295": {
+     "mae": 0.05004504695534706,
+     "n": 5971,
+     "ref_pred_class_mean": 0.04128946751990004,
+     "ref_true_class_mean": 0.03096511844234278
+    },
+    "source:walk_g113": {
+     "mae": 0.15494297444820404,
+     "n": 25077,
+     "ref_pred_class_mean": 0.20444852501360733,
+     "ref_true_class_mean": 0.2027315719251989
+    },
+    "source:walk_g80": {
+     "mae": 0.12614531815052032,
+     "n": 23708,
+     "ref_pred_class_mean": 0.19896062418645,
+     "ref_true_class_mean": 0.19703268637006713
+    },
+    "source:walk_sonic": {
+     "mae": 0.17407527565956116,
+     "n": 26147,
+     "ref_pred_class_mean": 0.1974595966995909,
+     "ref_true_class_mean": 0.18871803648449856
+    },
+    "saturated": {
+     "mae": 0.10807585716247559,
+     "n": 21467,
+     "ref_pred_class_mean": 0.14088206857279037,
+     "ref_true_class_mean": 0.1345272680618108
+    },
+    "not saturated": {
+     "mae": 0.17034772038459778,
+     "n": 53465,
+     "ref_pred_class_mean": 0.22411998220949594,
+     "ref_true_class_mean": 0.22073626099517546
+    },
+    "hard_slip saturated": {
+     "mae": 0.06715173274278641,
+     "n": 10010,
+     "ref_pred_class_mean": 0.09570829479114992,
+     "ref_true_class_mean": 0.0885836615272752
+    },
+    "hard_slip not saturated": {
+     "mae": 0.11255399882793427,
+     "n": 741,
+     "ref_pred_class_mean": 0.10391796359166443,
+     "ref_true_class_mean": 0.07243176743730038
+    }
+   }
+  ]
+ }
+}

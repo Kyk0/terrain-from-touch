@@ -1,0 +1,17 @@
+# D19 fifth sensitivity arm: the sensitivity episodes (same plan, seed and episode ids as configs/sens_v2.yaml) are
+# simulated again; the primary readout (nominal) goes to <out>/nominal_regen (identity check against the stored
+# nominal readout, then removed except for a few episodes) and the extra readout 'nosat' (nominal without per-point
+# saturation) to <out>/nosat, for train, val and test.
+seconds: 20
+seed: 3101
+sole: v2
+sole_setting: nominal
+groups:
+  sens:
+    classes: [hard_grip, hard_slip, soft, rough, slope, "edge:planks", "edge:steps"]
+    hours_per_source: {default: 0.45, "edge:planks": 0.225, "edge:steps": 0.225}
+    sources: [walk_g113, walk_g80, walk_sonic]
+    splits: [0.7, 0.1, 0.2]
+    out_subdir: nominal_regen
+    readouts: [nosat]
+    readout_splits: [train, val, test]

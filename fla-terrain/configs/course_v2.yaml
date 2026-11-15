@@ -1,0 +1,14 @@
+# FLA-0 v2 mixed-terrain course runs (brief section 5, D14 question 5): test only, course seeds 0-39 per source,
+# run length per course = 1 s stand + start pad + planned chunk time + 5 s (~75 s, cap 90 s) so a run that does
+# not fall crosses every chunk (60 s was too short: the chunks alone are planned at ~64 s). Randomized sole. The new velocity policy is appended later (add it to `sources`).
+seconds: 90
+seed: 3201
+sole: v2
+sole_setting: random
+groups:
+  course:
+    classes: [course]
+    course_seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+    sources: [walk_g113, walk_g80, walk_sonic]
+    splits: [0.0, 0.0, 1.0]
+    course_auto_T: true

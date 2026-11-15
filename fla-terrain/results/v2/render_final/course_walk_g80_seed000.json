@@ -1,0 +1,23 @@
+{
+ "episode": "course_walk_g80_seed000",
+ "identical_to_dataset": true,
+ "differing_arrays": [],
+ "n_video_frames": 2211,
+ "seconds": 90.0,
+ "task": {
+  "terrain": "course",
+  "variant": null,
+  "source": "walk_g80",
+  "split": "test",
+  "seconds": 90.0,
+  "seed": 3201,
+  "index": 0,
+  "episode_id": "course_walk_g80_seed000",
+  "split_key": "course_walk_g80_seed000",
+  "group": "course",
+  "sole": "v2",
+  "sole_setting": "random",
+  "course_seed": 0,
+  "course_auto_T": true
+ }
+}

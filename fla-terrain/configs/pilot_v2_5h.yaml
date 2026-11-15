@@ -1,0 +1,12 @@
+# FLA-0 v2 pilot (A7): G113, three terrains, randomized sole v2 (per-episode parameters), 20 s episodes.
+# 300 episodes (1.67 h) per terrain, split 70/10/20 by band -> 5 h total (pilot, larger size).
+seconds: 20
+seed: 2002
+sole: v2
+sole_setting: random
+groups:
+  walk:
+    classes: [hard_grip, hard_slip, "edge:planks", "edge:steps"]
+    hours: {default: 1.6667, "edge:planks": 0.8333, "edge:steps": 0.8333}
+    sources: [walk_g113]
+    splits: [0.7, 0.1, 0.2]

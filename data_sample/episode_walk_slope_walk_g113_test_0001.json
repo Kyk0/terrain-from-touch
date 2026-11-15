@@ -1,0 +1,495 @@
+{
+ "episode_id": "walk_slope_walk_g113_test_0001",
+ "fall_time": null,
+ "fell": false,
+ "joint_names": [
+  "aahead_yaw_joint",
+  "aahead_pitch_joint",
+  "aaleft_shoulder_pitch_joint",
+  "left_shoulder_roll_joint",
+  "left_elbow_pitch_joint",
+  "left_elbow_yaw_joint",
+  "aaright_shoulder_pitch_joint",
+  "right_shoulder_roll_joint",
+  "right_elbow_pitch_joint",
+  "right_elbow_yaw_joint",
+  "left_hip_pitch_joint",
+  "left_hip_roll_joint",
+  "left_hip_yaw_joint",
+  "left_knee_pitch_joint",
+  "left_ankle_pitch_joint",
+  "left_ankle_roll_joint",
+  "right_hip_pitch_joint",
+  "right_hip_roll_joint",
+  "right_hip_yaw_joint",
+  "right_knee_pitch_joint",
+  "right_ankle_pitch_joint",
+  "right_ankle_roll_joint"
+ ],
+ "mode": "walk",
+ "motion_source": "G113_m2200",
+ "notes": "{\"fell\": false, \"fall_time\": null, \"source\": \"walk_g113\"}",
+ "rate_hz": 50.0,
+ "robot": "booster_k1_22dof_mujoco",
+ "schema_version": "0.2",
+ "sensor_model": {
+  "enabled": true,
+  "gain_std": 0.03,
+  "name": "fla_sole_v1",
+  "native_rate_hz": 150.0,
+  "noise_normal_n": 0.25,
+  "noise_shear_n": 0.15,
+  "offset_std_n": 0.1,
+  "physics_dt": 0.002,
+  "proprio_noise": {
+   "grav": 0.005,
+   "gyro": 0.01,
+   "q": 0.002,
+   "qd": 0.05
+  },
+  "quant_n": 0.05,
+  "sat_normal_n": 300.0,
+  "sat_shear_n": 150.0,
+  "support_probe": {
+   "drop_tol_m": 0.025,
+   "full_thresh": 0.9,
+   "grid": [
+    8,
+    3
+   ],
+   "method": "vertical rays, unsupported if > drop_tol below extrapolated neighbour surfaces"
+  }
+ },
+ "sensor_native_rate_hz": 150.0,
+ "source": "sim",
+ "split_key": "walk_slope_walk_g113_test_0001",
+ "terrain_params": {
+  "class": "slope",
+  "cmd_schedule": {
+   "kind": "speed_change",
+   "stand_s": 1.0,
+   "t": [
+    1.0,
+    4.884324374714319,
+    9.571262175896308,
+    13.94223767994705,
+    16.959557529018326
+   ],
+   "vx": [
+    0.37403142030046477,
+    0.43961074512910103,
+    0.22335659855721904,
+    0.4622283636278357,
+    0.47303473163128146
+   ]
+  },
+  "fall_time": null,
+  "fell": false,
+  "mu_band": "test_out",
+  "range_split": "test",
+  "regions": [
+   {
+    "class": "slope",
+    "label": 4,
+    "mu": 1.251049073408959,
+    "slope": 0.10591806183492147,
+    "stiffness": 770000000.0
+   }
+  ],
+  "slope_deg": 6.06865791734668,
+  "source": "walk_g113",
+  "spawn_yaw": 2.602323004578243,
+  "uphill_rel_heading": 0.44063794090466546,
+  "walker": "g113"
+ },
+ "touchdowns": [
+  [
+   0.08,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   0.08,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   0.16,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   0.24,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   1.44,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   1.5,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   2.0,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   2.48,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   3.0,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   3.5,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   3.56,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   4.0,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   4.5,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   4.56,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   5.0,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   5.48,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   6.0,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   6.48,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   6.98,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   7.48,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   8.0,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   8.48,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   8.56,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   8.98,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   9.48,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   10.0,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   10.52,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   11.04,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   11.06,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   11.48,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   12.02,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   12.5,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   13.04,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   13.48,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   14.02,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   14.5,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   14.96,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   15.0,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   15.46,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   15.98,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   16.48,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   16.56,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   16.98,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   17.48,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   17.98,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   18.48,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   18.98,
+   "R",
+   [
+    0
+   ]
+  ],
+  [
+   19.46,
+   "L",
+   [
+    0
+   ]
+  ],
+  [
+   19.98,
+   "R",
+   [
+    0
+   ]
+  ]
+ ],
+ "unknown_intervals": [],
+ "zone_layout": {
+  "Z": 8,
+  "frame": "sole: origin at sole bottom centre, x toe, y left, z up; force on sole from ground",
+  "index": "z = i_along * n_across + i_across; i_along=0 heel, i_across=0 at -y",
+  "n_across": 2,
+  "n_along": 4,
+  "name": "grid_2x4",
+  "sole_length_m": 0.18,
+  "sole_width_m": 0.07,
+  "zone_centers_xy_m": [
+   [
+    -0.0675,
+    -0.0175
+   ],
+   [
+    -0.0675,
+    0.0175
+   ],
+   [
+    -0.022499999999999992,
+    -0.0175
+   ],
+   [
+    -0.022499999999999992,
+    0.0175
+   ],
+   [
+    0.022499999999999992,
+    -0.0175
+   ],
+   [
+    0.022499999999999992,
+    0.0175
+   ],
+   [
+    0.0675,
+    -0.0175
+   ],
+   [
+    0.0675,
+    0.0175
+   ]
+  ]
+ }
+}

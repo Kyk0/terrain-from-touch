@@ -1,0 +1,1396 @@
+{
+ "edge_events_P+N_s0_walk_test": {
+  "n_events": 2127,
+  "miss_rate": 0.27926657263751764,
+  "n_missed": 594,
+  "n_missed_shorter_than_0.3s": 477
+ },
+ "clips": [
+  {
+   "clip": "terrain_hard_grip_g113",
+   "title": "hard-grip, G113 velocity policy",
+   "episode": "walk_hard_grip_walk_g113_test_0000",
+   "t0": 1.0,
+   "t1": 11.0,
+   "group": "terrain",
+   "pool": {
+    "prefix": "walk_hard_grip_walk_g113",
+    "n_test_episodes": 36,
+    "n_fell": 0
+   },
+   "identical_to_dataset": true,
+   "differing_arrays": [],
+   "fps": 30,
+   "physics_dt": 0.002,
+   "base_rig": false,
+   "regions": [
+    {
+     "class": "hard_grip",
+     "label": 0,
+     "mu": 1.2180751593903212,
+     "slope": 0.0,
+     "stiffness": 770000000.0
+    }
+   ],
+   "class": "hard_grip",
+   "variant": null,
+   "band": "test_out",
+   "gait": "g113",
+   "gait_name": "G113 velocity policy",
+   "motion_source": "G113_m2200",
+   "terrain_labels": {
+    "-1": "unknown",
+    "0": "hard_grip",
+    "1": "hard_slip",
+    "2": "soft",
+    "3": "rough",
+    "4": "slope",
+    "5": "edge"
+   },
+   "mass": 19.665999999999997,
+   "zone_layout": {
+    "Z": 8,
+    "frame": "sole: origin at sole bottom centre, x toe, y left, z up; force on sole from ground",
+    "index": "z = i_along * n_across + i_across; i_along=0 heel, i_across=0 at -y",
+    "n_across": 2,
+    "n_along": 4,
+    "name": "grid_2x4",
+    "sole_length_m": 0.18,
+    "sole_width_m": 0.07,
+    "zone_centers_xy_m": [
+     [
+      -0.0675,
+      -0.0175
+     ],
+     [
+      -0.0675,
+      0.0175
+     ],
+     [
+      -0.022499999999999992,
+      -0.0175
+     ],
+     [
+      -0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.022499999999999992,
+      -0.0175
+     ],
+     [
+      0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.0675,
+      -0.0175
+     ],
+     [
+      0.0675,
+      0.0175
+     ]
+    ]
+   },
+   "prediction_file": "pred_P+N_s0.npz",
+   "segment_accuracy": {
+    "n_windows": 50,
+    "terrain_known": 50,
+    "terrain_correct": 47,
+    "support_L_correct": 49,
+    "support_R_correct": 50
+   },
+   "cmd_schedule": {
+    "kind": "turn",
+    "stand_s": 1.0,
+    "vx": 0.2783042535297408,
+    "wz": [
+     0.0,
+     -0.21072869501443778,
+     0.0,
+     -0.3989130904910144,
+     0.0,
+     -0.2715547947078266,
+     0.0
+    ]
+   }
+  },
+  {
+   "clip": "terrain_hard_slip_g113",
+   "title": "hard-slip, G113 velocity policy",
+   "episode": "walk_hard_slip_walk_g113_test_0003",
+   "t0": 1.0,
+   "t1": 11.0,
+   "group": "terrain",
+   "pool": {
+    "prefix": "walk_hard_slip_walk_g113",
+    "n_test_episodes": 36,
+    "n_fell": 16
+   },
+   "identical_to_dataset": true,
+   "differing_arrays": [],
+   "fps": 30,
+   "physics_dt": 0.002,
+   "base_rig": false,
+   "regions": [
+    {
+     "class": "hard_slip",
+     "label": 1,
+     "mu": 0.2859374079917576,
+     "slope": 0.0,
+     "stiffness": 770000000.0
+    }
+   ],
+   "class": "hard_slip",
+   "variant": null,
+   "band": "test_in",
+   "gait": "g113",
+   "gait_name": "G113 velocity policy",
+   "motion_source": "G113_m2200",
+   "terrain_labels": {
+    "-1": "unknown",
+    "0": "hard_grip",
+    "1": "hard_slip",
+    "2": "soft",
+    "3": "rough",
+    "4": "slope",
+    "5": "edge"
+   },
+   "mass": 19.665999999999997,
+   "zone_layout": {
+    "Z": 8,
+    "frame": "sole: origin at sole bottom centre, x toe, y left, z up; force on sole from ground",
+    "index": "z = i_along * n_across + i_across; i_along=0 heel, i_across=0 at -y",
+    "n_across": 2,
+    "n_along": 4,
+    "name": "grid_2x4",
+    "sole_length_m": 0.18,
+    "sole_width_m": 0.07,
+    "zone_centers_xy_m": [
+     [
+      -0.0675,
+      -0.0175
+     ],
+     [
+      -0.0675,
+      0.0175
+     ],
+     [
+      -0.022499999999999992,
+      -0.0175
+     ],
+     [
+      -0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.022499999999999992,
+      -0.0175
+     ],
+     [
+      0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.0675,
+      -0.0175
+     ],
+     [
+      0.0675,
+      0.0175
+     ]
+    ]
+   },
+   "prediction_file": "pred_P+N_s0.npz",
+   "segment_accuracy": {
+    "n_windows": 50,
+    "terrain_known": 50,
+    "terrain_correct": 50,
+    "support_L_correct": 50,
+    "support_R_correct": 50
+   },
+   "cmd_schedule": {
+    "kind": "turn",
+    "stand_s": 1.0,
+    "vx": 0.37417965338793746,
+    "wz": [
+     0.0,
+     0.3213815089466182,
+     0.0,
+     0.27988260431420064,
+     0.0,
+     0.3050893459817056,
+     0.0
+    ]
+   }
+  },
+  {
+   "clip": "terrain_soft_g113",
+   "title": "soft, G113 velocity policy",
+   "episode": "walk_soft_walk_g113_test_0000",
+   "t0": 1.0,
+   "t1": 11.0,
+   "group": "terrain",
+   "pool": {
+    "prefix": "walk_soft_walk_g113",
+    "n_test_episodes": 36,
+    "n_fell": 0
+   },
+   "identical_to_dataset": true,
+   "differing_arrays": [],
+   "fps": 30,
+   "physics_dt": 0.002,
+   "base_rig": false,
+   "regions": [
+    {
+     "class": "soft",
+     "label": 2,
+     "mu": 1.227867472651598,
+     "slope": 0.0,
+     "stiffness": 15005.580018581206
+    }
+   ],
+   "class": "soft",
+   "variant": null,
+   "band": "test_out",
+   "gait": "g113",
+   "gait_name": "G113 velocity policy",
+   "motion_source": "G113_m2200",
+   "terrain_labels": {
+    "-1": "unknown",
+    "0": "hard_grip",
+    "1": "hard_slip",
+    "2": "soft",
+    "3": "rough",
+    "4": "slope",
+    "5": "edge"
+   },
+   "mass": 19.665999999999997,
+   "zone_layout": {
+    "Z": 8,
+    "frame": "sole: origin at sole bottom centre, x toe, y left, z up; force on sole from ground",
+    "index": "z = i_along * n_across + i_across; i_along=0 heel, i_across=0 at -y",
+    "n_across": 2,
+    "n_along": 4,
+    "name": "grid_2x4",
+    "sole_length_m": 0.18,
+    "sole_width_m": 0.07,
+    "zone_centers_xy_m": [
+     [
+      -0.0675,
+      -0.0175
+     ],
+     [
+      -0.0675,
+      0.0175
+     ],
+     [
+      -0.022499999999999992,
+      -0.0175
+     ],
+     [
+      -0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.022499999999999992,
+      -0.0175
+     ],
+     [
+      0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.0675,
+      -0.0175
+     ],
+     [
+      0.0675,
+      0.0175
+     ]
+    ]
+   },
+   "prediction_file": "pred_P+N_s0.npz",
+   "segment_accuracy": {
+    "n_windows": 50,
+    "terrain_known": 50,
+    "terrain_correct": 50,
+    "support_L_correct": 50,
+    "support_R_correct": 49
+   },
+   "cmd_schedule": {
+    "kind": "straight",
+    "stand_s": 1.0,
+    "vx": 0.27143253479122054
+   }
+  },
+  {
+   "clip": "terrain_rough_g113",
+   "title": "rough, G113 velocity policy",
+   "episode": "walk_rough_walk_g113_test_0000",
+   "t0": 1.0,
+   "t1": 11.0,
+   "group": "terrain",
+   "pool": {
+    "prefix": "walk_rough_walk_g113",
+    "n_test_episodes": 36,
+    "n_fell": 0
+   },
+   "identical_to_dataset": true,
+   "differing_arrays": [],
+   "fps": 30,
+   "physics_dt": 0.002,
+   "base_rig": false,
+   "regions": [
+    {
+     "class": "rough",
+     "label": 3,
+     "mu": 0.9865143264098548,
+     "slope": 0.0,
+     "stiffness": 770000000.0
+    }
+   ],
+   "class": "rough",
+   "variant": null,
+   "band": "test_in",
+   "gait": "g113",
+   "gait_name": "G113 velocity policy",
+   "motion_source": "G113_m2200",
+   "terrain_labels": {
+    "-1": "unknown",
+    "0": "hard_grip",
+    "1": "hard_slip",
+    "2": "soft",
+    "3": "rough",
+    "4": "slope",
+    "5": "edge"
+   },
+   "mass": 19.665999999999997,
+   "zone_layout": {
+    "Z": 8,
+    "frame": "sole: origin at sole bottom centre, x toe, y left, z up; force on sole from ground",
+    "index": "z = i_along * n_across + i_across; i_along=0 heel, i_across=0 at -y",
+    "n_across": 2,
+    "n_along": 4,
+    "name": "grid_2x4",
+    "sole_length_m": 0.18,
+    "sole_width_m": 0.07,
+    "zone_centers_xy_m": [
+     [
+      -0.0675,
+      -0.0175
+     ],
+     [
+      -0.0675,
+      0.0175
+     ],
+     [
+      -0.022499999999999992,
+      -0.0175
+     ],
+     [
+      -0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.022499999999999992,
+      -0.0175
+     ],
+     [
+      0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.0675,
+      -0.0175
+     ],
+     [
+      0.0675,
+      0.0175
+     ]
+    ]
+   },
+   "prediction_file": "pred_P+N_s0.npz",
+   "segment_accuracy": {
+    "n_windows": 50,
+    "terrain_known": 50,
+    "terrain_correct": 24,
+    "support_L_correct": 50,
+    "support_R_correct": 49
+   },
+   "cmd_schedule": {
+    "kind": "steady",
+    "stand_s": 1.0,
+    "vx": 0.23017518149099395
+   }
+  },
+  {
+   "clip": "terrain_slope_g113",
+   "title": "slope, G113 velocity policy",
+   "episode": "walk_slope_walk_g113_test_0001",
+   "t0": 1.0,
+   "t1": 11.0,
+   "group": "terrain",
+   "pool": {
+    "prefix": "walk_slope_walk_g113",
+    "n_test_episodes": 36,
+    "n_fell": 0
+   },
+   "identical_to_dataset": true,
+   "differing_arrays": [],
+   "fps": 30,
+   "physics_dt": 0.002,
+   "base_rig": false,
+   "regions": [
+    {
+     "class": "slope",
+     "label": 4,
+     "mu": 1.251049073408959,
+     "slope": 0.10591806183492147,
+     "stiffness": 770000000.0
+    }
+   ],
+   "class": "slope",
+   "variant": null,
+   "band": "test_out",
+   "gait": "g113",
+   "gait_name": "G113 velocity policy",
+   "motion_source": "G113_m2200",
+   "terrain_labels": {
+    "-1": "unknown",
+    "0": "hard_grip",
+    "1": "hard_slip",
+    "2": "soft",
+    "3": "rough",
+    "4": "slope",
+    "5": "edge"
+   },
+   "mass": 19.665999999999997,
+   "zone_layout": {
+    "Z": 8,
+    "frame": "sole: origin at sole bottom centre, x toe, y left, z up; force on sole from ground",
+    "index": "z = i_along * n_across + i_across; i_along=0 heel, i_across=0 at -y",
+    "n_across": 2,
+    "n_along": 4,
+    "name": "grid_2x4",
+    "sole_length_m": 0.18,
+    "sole_width_m": 0.07,
+    "zone_centers_xy_m": [
+     [
+      -0.0675,
+      -0.0175
+     ],
+     [
+      -0.0675,
+      0.0175
+     ],
+     [
+      -0.022499999999999992,
+      -0.0175
+     ],
+     [
+      -0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.022499999999999992,
+      -0.0175
+     ],
+     [
+      0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.0675,
+      -0.0175
+     ],
+     [
+      0.0675,
+      0.0175
+     ]
+    ]
+   },
+   "prediction_file": "pred_P+N_s0.npz",
+   "segment_accuracy": {
+    "n_windows": 50,
+    "terrain_known": 50,
+    "terrain_correct": 50,
+    "support_L_correct": 50,
+    "support_R_correct": 49
+   },
+   "cmd_schedule": {
+    "kind": "speed_change",
+    "stand_s": 1.0,
+    "t": [
+     1.0,
+     4.884324374714319,
+     9.571262175896308,
+     13.94223767994705,
+     16.959557529018326
+    ],
+    "vx": [
+     0.37403142030046477,
+     0.43961074512910103,
+     0.22335659855721904,
+     0.4622283636278357,
+     0.47303473163128146
+    ]
+   }
+  },
+  {
+   "clip": "terrain_edge_g113",
+   "title": "edge, G113 velocity policy",
+   "episode": "walk_edge-planks_walk_g113_test_0000",
+   "t0": 1.0,
+   "t1": 11.0,
+   "group": "terrain",
+   "pool": {
+    "prefix": "walk_edge-planks_walk_g113",
+    "n_test_episodes": 18,
+    "n_fell": 0
+   },
+   "identical_to_dataset": true,
+   "differing_arrays": [],
+   "fps": 30,
+   "physics_dt": 0.002,
+   "base_rig": false,
+   "regions": [
+    {
+     "class": "edge",
+     "label": 5,
+     "mu": 0.971439858339806,
+     "slope": 0.0,
+     "stiffness": 770000000.0
+    }
+   ],
+   "class": "edge",
+   "variant": "planks",
+   "band": "test_in",
+   "gait": "g113",
+   "gait_name": "G113 velocity policy",
+   "motion_source": "G113_m2200",
+   "terrain_labels": {
+    "-1": "unknown",
+    "0": "hard_grip",
+    "1": "hard_slip",
+    "2": "soft",
+    "3": "rough",
+    "4": "slope",
+    "5": "edge"
+   },
+   "mass": 19.665999999999997,
+   "zone_layout": {
+    "Z": 8,
+    "frame": "sole: origin at sole bottom centre, x toe, y left, z up; force on sole from ground",
+    "index": "z = i_along * n_across + i_across; i_along=0 heel, i_across=0 at -y",
+    "n_across": 2,
+    "n_along": 4,
+    "name": "grid_2x4",
+    "sole_length_m": 0.18,
+    "sole_width_m": 0.07,
+    "zone_centers_xy_m": [
+     [
+      -0.0675,
+      -0.0175
+     ],
+     [
+      -0.0675,
+      0.0175
+     ],
+     [
+      -0.022499999999999992,
+      -0.0175
+     ],
+     [
+      -0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.022499999999999992,
+      -0.0175
+     ],
+     [
+      0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.0675,
+      -0.0175
+     ],
+     [
+      0.0675,
+      0.0175
+     ]
+    ]
+   },
+   "prediction_file": "pred_P+N_s0.npz",
+   "segment_accuracy": {
+    "n_windows": 50,
+    "terrain_known": 50,
+    "terrain_correct": 45,
+    "support_L_correct": 39,
+    "support_R_correct": 42
+   },
+   "cmd_schedule": {
+    "kind": "turn",
+    "stand_s": 1.0,
+    "vx": 0.3376890671136757,
+    "wz": [
+     0.0,
+     -0.34147140797981884,
+     0.0,
+     0.35635752127389864,
+     0.0,
+     0.23385661368558824
+    ]
+   }
+  },
+  {
+   "clip": "terrain_hard_grip_sonic",
+   "title": "hard-grip, SONIC-K1 clip playback",
+   "episode": "walk_hard_grip_walk_sonic_test_0000",
+   "t0": 2.0,
+   "t1": 12.0,
+   "group": "sonic",
+   "pool": {
+    "prefix": "walk_hard_grip_walk_sonic",
+    "n_test_episodes": 36,
+    "n_fell": 0
+   },
+   "identical_to_dataset": true,
+   "differing_arrays": [],
+   "fps": 30,
+   "physics_dt": 0.002,
+   "base_rig": false,
+   "regions": [
+    {
+     "class": "hard_grip",
+     "label": 0,
+     "mu": 1.260716695661317,
+     "slope": 0.0,
+     "stiffness": 770000000.0
+    }
+   ],
+   "class": "hard_grip",
+   "variant": null,
+   "band": "test_out",
+   "gait": "sonic",
+   "gait_name": "SONIC-K1 clip playback",
+   "motion_source": "sonic_k1_it50000",
+   "terrain_labels": {
+    "-1": "unknown",
+    "0": "hard_grip",
+    "1": "hard_slip",
+    "2": "soft",
+    "3": "rough",
+    "4": "slope",
+    "5": "edge"
+   },
+   "mass": 19.665999999999997,
+   "zone_layout": {
+    "Z": 8,
+    "frame": "sole: origin at sole bottom centre, x toe, y left, z up; force on sole from ground",
+    "index": "z = i_along * n_across + i_across; i_along=0 heel, i_across=0 at -y",
+    "n_across": 2,
+    "n_along": 4,
+    "name": "grid_2x4",
+    "sole_length_m": 0.18,
+    "sole_width_m": 0.07,
+    "zone_centers_xy_m": [
+     [
+      -0.0675,
+      -0.0175
+     ],
+     [
+      -0.0675,
+      0.0175
+     ],
+     [
+      -0.022499999999999992,
+      -0.0175
+     ],
+     [
+      -0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.022499999999999992,
+      -0.0175
+     ],
+     [
+      0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.0675,
+      -0.0175
+     ],
+     [
+      0.0675,
+      0.0175
+     ]
+    ]
+   },
+   "prediction_file": "pred_P+N_s0.npz",
+   "segment_accuracy": {
+    "n_windows": 50,
+    "terrain_known": 50,
+    "terrain_correct": 50,
+    "support_L_correct": 50,
+    "support_R_correct": 50
+   },
+   "cmd_schedule": null
+  },
+  {
+   "clip": "terrain_hard_slip_sonic",
+   "title": "hard-slip, SONIC-K1 clip playback",
+   "episode": "walk_hard_slip_walk_sonic_test_0000",
+   "t0": 2.0,
+   "t1": 12.0,
+   "group": "sonic",
+   "pool": {
+    "prefix": "walk_hard_slip_walk_sonic",
+    "n_test_episodes": 36,
+    "n_fell": 1
+   },
+   "identical_to_dataset": true,
+   "differing_arrays": [],
+   "fps": 30,
+   "physics_dt": 0.002,
+   "base_rig": false,
+   "regions": [
+    {
+     "class": "hard_slip",
+     "label": 1,
+     "mu": 0.10416590381568125,
+     "slope": 0.0,
+     "stiffness": 770000000.0
+    }
+   ],
+   "class": "hard_slip",
+   "variant": null,
+   "band": "test_out",
+   "gait": "sonic",
+   "gait_name": "SONIC-K1 clip playback",
+   "motion_source": "sonic_k1_it50000",
+   "terrain_labels": {
+    "-1": "unknown",
+    "0": "hard_grip",
+    "1": "hard_slip",
+    "2": "soft",
+    "3": "rough",
+    "4": "slope",
+    "5": "edge"
+   },
+   "mass": 19.665999999999997,
+   "zone_layout": {
+    "Z": 8,
+    "frame": "sole: origin at sole bottom centre, x toe, y left, z up; force on sole from ground",
+    "index": "z = i_along * n_across + i_across; i_along=0 heel, i_across=0 at -y",
+    "n_across": 2,
+    "n_along": 4,
+    "name": "grid_2x4",
+    "sole_length_m": 0.18,
+    "sole_width_m": 0.07,
+    "zone_centers_xy_m": [
+     [
+      -0.0675,
+      -0.0175
+     ],
+     [
+      -0.0675,
+      0.0175
+     ],
+     [
+      -0.022499999999999992,
+      -0.0175
+     ],
+     [
+      -0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.022499999999999992,
+      -0.0175
+     ],
+     [
+      0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.0675,
+      -0.0175
+     ],
+     [
+      0.0675,
+      0.0175
+     ]
+    ]
+   },
+   "prediction_file": "pred_P+N_s0.npz",
+   "segment_accuracy": {
+    "n_windows": 50,
+    "terrain_known": 50,
+    "terrain_correct": 50,
+    "support_L_correct": 50,
+    "support_R_correct": 50
+   },
+   "cmd_schedule": null
+  },
+  {
+   "clip": "strip_grip_slip_g113",
+   "title": "surface change grip -> slip, G113 velocity policy",
+   "episode": "strip_strip_grip_slip_walk_g113_test_0000",
+   "t0": 2.4,
+   "t1": 12.4,
+   "group": "special",
+   "pool": {
+    "prefix": "strip_strip_grip_slip_walk_g113",
+    "n_test_episodes": 17,
+    "n_fell": 7
+   },
+   "events": {
+    "kind": "strip",
+    "t_change": 6.4,
+    "latency_s": 0.40000009536743164,
+    "latency_steps": 1.0,
+    "t_detect": 6.800000095367432,
+    "new_class": 1
+   },
+   "identical_to_dataset": true,
+   "differing_arrays": [],
+   "fps": 30,
+   "physics_dt": 0.002,
+   "base_rig": false,
+   "regions": [
+    {
+     "class": "hard_grip",
+     "label": 0,
+     "mu": 1.269798576438635,
+     "slope": 0.0,
+     "stiffness": 770000000.0
+    },
+    {
+     "class": "hard_slip",
+     "label": 1,
+     "mu": 0.11823314520815043,
+     "slope": 0.0,
+     "stiffness": 770000000.0
+    }
+   ],
+   "class": "strip_grip_slip",
+   "variant": null,
+   "band": "test_out",
+   "gait": "g113",
+   "gait_name": "G113 velocity policy",
+   "motion_source": "G113_m2200",
+   "terrain_labels": {
+    "-1": "unknown",
+    "0": "hard_grip",
+    "1": "hard_slip",
+    "2": "soft",
+    "3": "rough",
+    "4": "slope",
+    "5": "edge"
+   },
+   "mass": 19.665999999999997,
+   "zone_layout": {
+    "Z": 8,
+    "frame": "sole: origin at sole bottom centre, x toe, y left, z up; force on sole from ground",
+    "index": "z = i_along * n_across + i_across; i_along=0 heel, i_across=0 at -y",
+    "n_across": 2,
+    "n_along": 4,
+    "name": "grid_2x4",
+    "sole_length_m": 0.18,
+    "sole_width_m": 0.07,
+    "zone_centers_xy_m": [
+     [
+      -0.0675,
+      -0.0175
+     ],
+     [
+      -0.0675,
+      0.0175
+     ],
+     [
+      -0.022499999999999992,
+      -0.0175
+     ],
+     [
+      -0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.022499999999999992,
+      -0.0175
+     ],
+     [
+      0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.0675,
+      -0.0175
+     ],
+     [
+      0.0675,
+      0.0175
+     ]
+    ]
+   },
+   "prediction_file": "pred_P+N_s0.npz",
+   "segment_accuracy": {
+    "n_windows": 51,
+    "terrain_known": 49,
+    "terrain_correct": 43,
+    "support_L_correct": 50,
+    "support_R_correct": 49
+   },
+   "cmd_schedule": {
+    "kind": "turn",
+    "stand_s": 1.0,
+    "vx": 0.31094882751778924,
+    "wz": [
+     0.0,
+     0.21962160202483347,
+     0.0,
+     0.2330505452346841,
+     0.0,
+     0.48610719368683547,
+     0.0
+    ]
+   }
+  },
+  {
+   "clip": "lifted_mid_walk_g113",
+   "title": "lifted mid-walk, G113 velocity policy",
+   "episode": "liftmid_hard_grip_liftmid_g113_test_0000",
+   "t0": 1.14,
+   "t1": 11.14,
+   "group": "special",
+   "pool": {
+    "prefix": "liftmid_hard_grip_liftmid_g113",
+    "n_test_episodes": 2,
+    "n_fell": 0
+   },
+   "events": {
+    "kind": "lift",
+    "t_up": 4.1397952815798185,
+    "t_down": 7.713474114449642,
+    "t_airborne": 4.179999828338623,
+    "ramp": 0.5,
+    "delay_s": 0.019999980926513672,
+    "dz": 0.25163175374597935
+   },
+   "identical_to_dataset": true,
+   "differing_arrays": [],
+   "fps": 30,
+   "physics_dt": 0.002,
+   "base_rig": true,
+   "regions": [
+    {
+     "class": "hard_grip",
+     "label": 0,
+     "mu": 1.261280079055469,
+     "slope": 0.0,
+     "stiffness": 770000000.0
+    }
+   ],
+   "class": "hard_grip",
+   "variant": null,
+   "band": "test_out",
+   "gait": "g113",
+   "gait_name": "G113 velocity policy",
+   "motion_source": "G113_m2200",
+   "terrain_labels": {
+    "-1": "unknown",
+    "0": "hard_grip",
+    "1": "hard_slip",
+    "2": "soft",
+    "3": "rough",
+    "4": "slope",
+    "5": "edge"
+   },
+   "mass": 19.665999999999997,
+   "zone_layout": {
+    "Z": 8,
+    "frame": "sole: origin at sole bottom centre, x toe, y left, z up; force on sole from ground",
+    "index": "z = i_along * n_across + i_across; i_along=0 heel, i_across=0 at -y",
+    "n_across": 2,
+    "n_along": 4,
+    "name": "grid_2x4",
+    "sole_length_m": 0.18,
+    "sole_width_m": 0.07,
+    "zone_centers_xy_m": [
+     [
+      -0.0675,
+      -0.0175
+     ],
+     [
+      -0.0675,
+      0.0175
+     ],
+     [
+      -0.022499999999999992,
+      -0.0175
+     ],
+     [
+      -0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.022499999999999992,
+      -0.0175
+     ],
+     [
+      0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.0675,
+      -0.0175
+     ],
+     [
+      0.0675,
+      0.0175
+     ]
+    ]
+   },
+   "prediction_file": "pred_P+N_s0.npz",
+   "segment_accuracy": {
+    "n_windows": 50,
+    "terrain_known": 32,
+    "terrain_correct": 24,
+    "support_L_correct": 50,
+    "support_R_correct": 49
+   },
+   "cmd_schedule": {
+    "kind": "turn",
+    "stand_s": 1.0,
+    "vx": 0.359686318026204,
+    "wz": [
+     0.0,
+     -0.48732679344480934,
+     0.0,
+     0.4586003510092724,
+     0.0,
+     0.3167082399009851,
+     0.0,
+     0.2027475584753094
+    ]
+   }
+  },
+  {
+   "clip": "failure_edge_miss_g113",
+   "title": "failure case: an edge touchdown the model misses, G113",
+   "episode": "walk_edge-planks_walk_g113_test_0003",
+   "t0": 9.48,
+   "t1": 19.48,
+   "group": "special",
+   "pool": {
+    "prefix": "walk_edge-planks_walk_g113",
+    "n_test_episodes": 18,
+    "n_fell": 0
+   },
+   "events": {
+    "kind": "edge_miss",
+    "side": "L",
+    "t_p": 13.479999542236328,
+    "t_stop": 14.079999923706055,
+    "episode_events": [
+     {
+      "side": "R",
+      "t_p": 2.0,
+      "t_stop": 2.5799999237060547,
+      "delay": 0.0
+     },
+     {
+      "side": "L",
+      "t_p": 2.5,
+      "t_stop": 3.0399999618530273,
+      "delay": 0.09999990463256836
+     },
+     {
+      "side": "R",
+      "t_p": 3.0399999618530273,
+      "t_stop": 3.4800000190734863,
+      "delay": 0.16000008583068848
+     },
+     {
+      "side": "R",
+      "t_p": 3.5799999237060547,
+      "t_stop": 3.5799999237060547,
+      "delay": null
+     },
+     {
+      "side": "L",
+      "t_p": 4.519999980926514,
+      "t_stop": 5.099999904632568,
+      "delay": 0.2800002098083496
+     },
+     {
+      "side": "L",
+      "t_p": 5.5,
+      "t_stop": 6.099999904632568,
+      "delay": 0.09999990463256836
+     },
+     {
+      "side": "R",
+      "t_p": 6.019999980926514,
+      "t_stop": 6.019999980926514,
+      "delay": null
+     },
+     {
+      "side": "R",
+      "t_p": 6.059999942779541,
+      "t_stop": 6.579999923706055,
+      "delay": 0.1399998664855957
+     },
+     {
+      "side": "L",
+      "t_p": 6.559999942779541,
+      "t_stop": 7.099999904632568,
+      "delay": 0.039999961853027344
+     },
+     {
+      "side": "R",
+      "t_p": 7.019999980926514,
+      "t_stop": 7.579999923706055,
+      "delay": 0.17999982833862305
+     },
+     {
+      "side": "L",
+      "t_p": 7.539999961853027,
+      "t_stop": 8.079999923706055,
+      "delay": 0.059999942779541016
+     },
+     {
+      "side": "R",
+      "t_p": 8.039999961853027,
+      "t_stop": 8.039999961853027,
+      "delay": null
+     },
+     {
+      "side": "R",
+      "t_p": 8.079999923706055,
+      "t_stop": 8.479999542236328,
+      "delay": 0.11999988555908203
+     },
+     {
+      "side": "R",
+      "t_p": 9.0,
+      "t_stop": 9.5600004196167,
+      "delay": 0.39999961853027344
+     },
+     {
+      "side": "L",
+      "t_p": 9.5,
+      "t_stop": 10.020000457763672,
+      "delay": 0.10000038146972656
+     },
+     {
+      "side": "R",
+      "t_p": 10.039999961853027,
+      "t_stop": 10.5600004196167,
+      "delay": 0.15999984741210938
+     },
+     {
+      "side": "L",
+      "t_p": 10.479999542236328,
+      "t_stop": 11.100000381469727,
+      "delay": 0.12000083923339844
+     },
+     {
+      "side": "L",
+      "t_p": 11.5,
+      "t_stop": 12.100000381469727,
+      "delay": 0.10000038146972656
+     },
+     {
+      "side": "R",
+      "t_p": 12.020000457763672,
+      "t_stop": 12.5,
+      "delay": 0.17999935150146484
+     },
+     {
+      "side": "R",
+      "t_p": 12.539999961853027,
+      "t_stop": 12.579999923706055,
+      "delay": null
+     },
+     {
+      "side": "R",
+      "t_p": 13.039999961853027,
+      "t_stop": 13.460000038146973,
+      "delay": 0.15999984741210938
+     },
+     {
+      "side": "L",
+      "t_p": 13.479999542236328,
+      "t_stop": 14.079999923706055,
+      "delay": null
+     },
+     {
+      "side": "R",
+      "t_p": 13.5600004196167,
+      "t_stop": 13.579999923706055,
+      "delay": null
+     },
+     {
+      "side": "R",
+      "t_p": 14.0,
+      "t_stop": 14.5600004196167,
+      "delay": 0.39999961853027344
+     },
+     {
+      "side": "L",
+      "t_p": 14.5,
+      "t_stop": 14.5,
+      "delay": null
+     },
+     {
+      "side": "L",
+      "t_p": 14.539999961853027,
+      "t_stop": 15.079999923706055,
+      "delay": 0.06000041961669922
+     },
+     {
+      "side": "L",
+      "t_p": 15.5,
+      "t_stop": 16.100000381469727,
+      "delay": 0.3000001907348633
+     },
+     {
+      "side": "R",
+      "t_p": 16.020000457763672,
+      "t_stop": 16.559999465942383,
+      "delay": 0.18000030517578125
+     },
+     {
+      "side": "L",
+      "t_p": 16.559999465942383,
+      "t_stop": 17.100000381469727,
+      "delay": 0.04000091552734375
+     },
+     {
+      "side": "L",
+      "t_p": 17.5,
+      "t_stop": 18.100000381469727,
+      "delay": 0.10000038146972656
+     },
+     {
+      "side": "R",
+      "t_p": 18.020000457763672,
+      "t_stop": 18.579999923706055,
+      "delay": 0.18000030517578125
+     },
+     {
+      "side": "L",
+      "t_p": 18.520000457763672,
+      "t_stop": 19.079999923706055,
+      "delay": 0.07999992370605469
+     },
+     {
+      "side": "L",
+      "t_p": 19.479999542236328,
+      "t_stop": 20.0,
+      "delay": 0.12000083923339844
+     },
+     {
+      "side": "R",
+      "t_p": 20.0,
+      "t_stop": 20.0,
+      "delay": 0.0
+     }
+    ]
+   },
+   "identical_to_dataset": true,
+   "differing_arrays": [],
+   "fps": 30,
+   "physics_dt": 0.002,
+   "base_rig": false,
+   "regions": [
+    {
+     "class": "edge",
+     "label": 5,
+     "mu": 1.2258599313424081,
+     "slope": 0.0,
+     "stiffness": 770000000.0
+    }
+   ],
+   "class": "edge",
+   "variant": "planks",
+   "band": "test_out",
+   "gait": "g113",
+   "gait_name": "G113 velocity policy",
+   "motion_source": "G113_m2200",
+   "terrain_labels": {
+    "-1": "unknown",
+    "0": "hard_grip",
+    "1": "hard_slip",
+    "2": "soft",
+    "3": "rough",
+    "4": "slope",
+    "5": "edge"
+   },
+   "mass": 19.665999999999997,
+   "zone_layout": {
+    "Z": 8,
+    "frame": "sole: origin at sole bottom centre, x toe, y left, z up; force on sole from ground",
+    "index": "z = i_along * n_across + i_across; i_along=0 heel, i_across=0 at -y",
+    "n_across": 2,
+    "n_along": 4,
+    "name": "grid_2x4",
+    "sole_length_m": 0.18,
+    "sole_width_m": 0.07,
+    "zone_centers_xy_m": [
+     [
+      -0.0675,
+      -0.0175
+     ],
+     [
+      -0.0675,
+      0.0175
+     ],
+     [
+      -0.022499999999999992,
+      -0.0175
+     ],
+     [
+      -0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.022499999999999992,
+      -0.0175
+     ],
+     [
+      0.022499999999999992,
+      0.0175
+     ],
+     [
+      0.0675,
+      -0.0175
+     ],
+     [
+      0.0675,
+      0.0175
+     ]
+    ]
+   },
+   "prediction_file": "pred_P+N_s0.npz",
+   "segment_accuracy": {
+    "n_windows": 50,
+    "terrain_known": 50,
+    "terrain_correct": 44,
+    "support_L_correct": 45,
+    "support_R_correct": 39
+   },
+   "cmd_schedule": {
+    "kind": "steady",
+    "stand_s": 1.0,
+    "vx": 0.3862356158337539
+   }
+  }
+ ]
+}

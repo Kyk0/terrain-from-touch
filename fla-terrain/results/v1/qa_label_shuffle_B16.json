@@ -1,0 +1,23 @@
+{
+ "set": "P+N+S",
+ "seed": 0,
+ "frames_relabelled_frac": 0.659177277197256,
+ "test_walk_macro_f1": 0.09104840047689024,
+ "test_walk_acc": 0.09418289795544625,
+ "pred_class_dist": [
+  0.081,
+  0.261,
+  0.082,
+  0.11,
+  0.22,
+  0.247
+ ],
+ "train_info": {
+  "best_epoch": 5,
+  "val_loss": 2.4364050209814763,
+  "epochs_run": 11,
+  "train_s": 33.39569020271301,
+  "n_params": 202671,
+  "channels": 101
+ }
+}
